@@ -1,0 +1,64 @@
+.home {
+   &__header {
+      position: relative;
+      width: 100%;
+      height: 70px;
+      background-color: $elgengrau;
+      padding: 0 120px;
+   }
+
+   &__nav {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      a {
+         font-family: "Josefin Sans", sans-serif;
+         color: $antique-white;
+      }
+
+      &-logo {
+         font-weight: 100;
+         font-size: $font-lg;
+      }
+
+      &-links {
+         a {
+            position: relative;
+            text-transform: uppercase;
+            font-size: $font-sm;
+            font-weight: 300;
+            // padding: 11px 24px;
+            // border: 1px solid $antique-white;
+            // border-radius: 4px;
+
+            &:not(:last-child) {
+               margin-right: 24px;
+            }
+
+            &::before {
+               content: "";
+               display: block;
+               position: absolute;
+               height: 4px;
+               left: 0;
+               right: 0;
+               bottom: -25px;
+               background: linear-gradient(
+                  to right,
+                  $antique-white,
+                  $ochre-brown
+               );
+               //    background: $antique-white;
+               opacity: 0;
+               transition: opacity 300ms ease-in-out;
+            }
+
+            &:hover {
+               &::before {
+                  opacity: 1;
+               }
+            }
+         }
+      }
+   }
+}
