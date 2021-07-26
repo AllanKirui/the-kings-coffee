@@ -1,0 +1,48 @@
+html {
+   font-size: 100%;
+   box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+   box-sizing: inherit;
+}
+
+body {
+   margin: 0;
+   padding: 0;
+   font-family: "Josefin Sans", sans-serif;
+   font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3,
+p {
+   margin: 0;
+}
+
+.container {
+   margin: 0 auto;
+   max-width: 87.5rem;
+   // height: 50rem;
+   height: 100vh;
+}
+
+// Flex Properties
+.flex {
+   display: flex;
+
+   &-jc-sb {
+      justify-content: space-between;
+   }
+
+   &-jc-c {
+      justify-content: center;
+   }
+
+   &-ai-c {
+      align-items: center;
+   }
+}
