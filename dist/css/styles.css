@@ -89,6 +89,12 @@ a:hover {
 .home__nav-logo {
   font-weight: 100;
   font-size: 1.75rem;
+  -webkit-transition: color 300ms ease-in-out;
+  transition: color 300ms ease-in-out;
+}
+
+.home__nav-logo:hover {
+  color: #d69e5d;
 }
 
 .home__nav-links a {
@@ -96,6 +102,8 @@ a:hover {
   text-transform: uppercase;
   font-size: 0.875rem;
   font-weight: 300;
+  -webkit-transition: color 300ms ease-in-out;
+  transition: color 300ms ease-in-out;
 }
 
 .home__nav-links a:not(:last-child) {
@@ -106,15 +114,18 @@ a:hover {
   content: "";
   display: block;
   position: absolute;
-  height: 4px;
+  height: 3px;
   left: 0;
   right: 0;
   bottom: -25px;
-  background: -webkit-gradient(linear, left top, right top, from(#fbf0da), to(#9f703a));
-  background: linear-gradient(to right, #fbf0da, #9f703a);
+  background: #d69e5d;
   opacity: 0;
   -webkit-transition: opacity 300ms ease-in-out;
   transition: opacity 300ms ease-in-out;
+}
+
+.home__nav-links a:hover {
+  color: #d69e5d;
 }
 
 .home__nav-links a:hover::before {
