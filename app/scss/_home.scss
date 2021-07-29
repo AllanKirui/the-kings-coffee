@@ -1,22 +1,25 @@
 .home {
+   font-family: "Josefin Sans", sans-serif;
+
+   &__header,
+   &__main {
+      padding: 0 120px;
+   }
+
    &__header {
       position: relative;
       width: 100%;
       height: 70px;
       background-color: $elgengrau;
-      padding: 0 120px;
    }
 
    &__nav {
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%);
       a {
-         font-family: "Josefin Sans", sans-serif;
          color: $antique-white;
       }
 
       &-logo {
+         margin-top: 25px;
          font-weight: 100;
          font-size: $font-lg;
          transition: color 300ms ease-in-out;
@@ -27,12 +30,15 @@
       }
 
       &-links {
+         margin-top: 28px;
+
          a {
             position: relative;
             text-transform: uppercase;
             font-size: $font-sm;
             font-weight: 300;
             transition: color 300ms ease-in-out;
+            padding: 10px 20px;
 
             &:not(:last-child) {
                margin-right: 24px;
@@ -42,10 +48,10 @@
                content: "";
                display: block;
                position: absolute;
-               height: 3px;
+               height: 2px;
                left: 0;
                right: 0;
-               bottom: -25px;
+               bottom: -13px;
                background: $persian-orange;
                opacity: 0;
                transition: opacity 300ms ease-in-out;
@@ -53,11 +59,93 @@
 
             &:hover {
                color: $persian-orange;
+
                &::before {
                   opacity: 1;
                }
             }
          }
+      }
+   }
+
+   &__main {
+      padding-top: 180px;
+
+      &-text {
+         .heading {
+            width: 50%;
+            margin-left: 45px;
+            height: 170px;
+            font-size: $font-xxl;
+            font-weight: 400;
+            overflow: hidden;
+
+            div {
+               margin-bottom: 0px;
+               padding: 5px 0;
+               height: 170px;
+               box-sizing: border-box;
+
+               &:nth-child(4) {
+                  margin-top: 20px;
+               }
+            }
+
+            &__slider-text1 {
+               animation: slidingText 8s linear infinite;
+            }
+         }
+      }
+   }
+
+   @keyframes slidingText {
+      // 0% {
+      //    margin-top: -600px;
+      // }
+      // 5% {
+      //    margin-top: -450px;
+      // }
+      // 25% {
+      //    margin-top: -450px;
+      // }
+      // 30% {
+      //    margin-top: -300px;
+      // }
+      // 50% {
+      //    margin-top: -300px;
+      // }
+      // 55% {
+      //    margin-top: -150px;
+      // }
+      // 75% {
+      //    margin-top: -150px;
+      // }
+      0% {
+         margin-top: -680px;
+      }
+      5% {
+         margin-top: -510px;
+      }
+      25% {
+         margin-top: -510px;
+      }
+      30% {
+         margin-top: -340px;
+      }
+      50% {
+         margin-top: -340px;
+      }
+      55% {
+         margin-top: -170px;
+      }
+      75% {
+         margin-top: -170px;
+      }
+      80% {
+         margin-top: 0px;
+      }
+      100% {
+         margin-top: 0px;
       }
    }
 }
