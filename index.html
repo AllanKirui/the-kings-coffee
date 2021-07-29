@@ -13,6 +13,7 @@
       />
 
       <link rel="stylesheet" href="dist/css/styles.css" />
+      <script src="app/js/script.js" defer></script>
    </head>
    <body>
       <!-- Homepage -->
@@ -139,7 +140,8 @@
          </header>
 
          <!-- Homepage main -->
-         <main class="home__main">
+         <main class="home__main flex">
+            <!-- Homepage text -->
             <div class="home__main-text">
                <h1 class="heading">
                   <div class="heading__slider-text1">
@@ -160,7 +162,20 @@
                   </div>
                </h1>
             </div>
-            <div class="home__main-clock"></div>
+
+            <!-- Homepage clock -->
+            <div class="home__main-clock-container">
+               <img
+                  src="/img/watch_face.svg"
+                  alt="watch face of an analog clock"
+               />
+               <div class="home__main-clock">
+                  <div class="hand hour" data-hour-hand></div>
+                  <div class="hand minute" data-minute-hand></div>
+                  <div class="hand second" data-second-hand></div>
+                  <div class="center"></div>
+               </div>
+            </div>
          </main>
 
          <div class="home__social"></div>
