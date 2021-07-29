@@ -69,12 +69,13 @@
    }
 
    &__main {
-      padding-top: 180px;
-
+      position: relative;
       &-text {
+         // background-color: tomato;
+         margin: 190px 0 0 45px;
+         width: 53%;
          .heading {
-            width: 50%;
-            margin-left: 45px;
+            // width: 50%;
             height: 170px;
             font-size: $font-xxl;
             font-weight: 400;
@@ -94,6 +95,106 @@
             &__slider-text1 {
                animation: slidingText 8s linear infinite;
             }
+         }
+      }
+
+      &-clock-container {
+         margin: 100px 0 0 80px;
+         // background-color: $elgengrau;
+         // box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+         // box-shadow: rgba(red, 1) 0px 2px 8px 0px;
+         // width: 50%;
+         position: relative;
+         // top: 50px;
+         height: fit-content;
+
+         &::before {
+            content: "";
+            position: absolute;
+            top: -5px;
+            left: 2px;
+            width: 100%;
+            height: 100%;
+            // background-color: green;
+            // box-shadow: rgba($elgengrau, 1) 0px 2px 8px 0px;
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+            border-radius: 50%;
+            z-index: -2;
+         }
+      }
+
+      &-clock {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         width: 191.1px;
+         height: 191.1px;
+         opacity: 0.9;
+
+         & .hand {
+            --rotation: 0;
+            position: absolute;
+            bottom: 50%;
+            left: 50%;
+            width: 3px;
+            background-color: #000;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            transform-origin: bottom;
+            transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+            z-index: 5;
+         }
+
+         // Center dot
+         &::after {
+            content: "";
+            width: 8px;
+            height: 8px;
+            background-color: #fbf0da;
+            border: 2px solid #161719;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            z-index: 3;
+         }
+
+         // Second hand
+         & .hand.second {
+            position: absolute;
+            bottom: 1.9px;
+            width: 2px;
+            height: 20%;
+            background-color: #161719;
+            z-index: 1;
+         }
+
+         // Minute hand
+         & .hand.minute {
+            height: 40%;
+            background-color: #161719;
+         }
+
+         // Hour hand
+         & .hand.hour {
+            height: 35%;
+            background-color: #161719;
+         }
+
+         // Center dot for second hand
+         & .center {
+            position: absolute;
+            bottom: -1.7px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #fbf0da;
+            width: 7px;
+            height: 7px;
+            border: 2px solid #161719;
+            border-radius: 50%;
+            z-index: 2;
          }
       }
    }
