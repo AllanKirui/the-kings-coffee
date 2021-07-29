@@ -29,6 +29,54 @@ p {
    max-width: 87.5rem;
    // height: 50rem;
    height: 100vh;
+   position: relative;
+
+   // Social link styles
+   .social {
+      position: absolute;
+      top: 120px;
+      left: 70px;
+      z-index: 2;
+
+      &__top-bar,
+      &__bottom-bar {
+         width: 2px;
+         height: 120px;
+         background-color: $elgengrau;
+      }
+
+      &__links {
+         margin: 18px 0;
+         // background-color: tomato;
+
+         a {
+            transition: 300ms ease-in-out;
+
+            &:not(:last-child) {
+               margin-bottom: 6px;
+            }
+
+            &::before {
+               content: "";
+               position: absolute;
+               width: 30px;
+               height: 30px;
+               border-radius: 50%;
+               transition: box-shadow 300ms ease-in-out;
+
+               z-index: -1;
+            }
+
+            &:hover {
+               transform: translateX(10px);
+
+               &::before {
+                  box-shadow: 2px 2px 7px $elgengrau, -2px -2px 7px $elgengrau;
+               }
+            }
+         }
+      }
+   }
 }
 
 .text-bold {
@@ -60,5 +108,9 @@ a:hover {
 
    &-ai-c {
       align-items: center;
+   }
+
+   &-fd-c {
+      flex-direction: column;
    }
 }
