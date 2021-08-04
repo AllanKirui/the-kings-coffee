@@ -70,6 +70,7 @@
 
    &__main {
       position: relative;
+
       &-text {
          // background-color: tomato;
          margin: 190px 0 0 45px;
@@ -99,7 +100,7 @@
       }
 
       &-clock-container {
-         margin: 100px 0 0 80px;
+         margin: 80px 0 0 80px;
          // background-color: $elgengrau;
          // box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
          // box-shadow: rgba(red, 1) 0px 2px 8px 0px;
@@ -195,6 +196,40 @@
             border: 2px solid #161719;
             border-radius: 50%;
             z-index: 2;
+         }
+      }
+
+      &-digital-clock {
+         // background-color: tomato;
+         // color: $persian-orange;
+         text-transform: uppercase;
+         text-align: center;
+         color: #9f703a;
+         font-size: $font-sm;
+         position: absolute;
+         bottom: -38%;
+         left: 50%;
+         transform: translateX(-50%);
+
+         .time {
+            font-size: 60px;
+            color: $elgengrau;
+            margin-top: 5px;
+         }
+
+         .date .circle-bg {
+            background-color: $elgengrau;
+            // position: relative;
+            // top: -2px;
+            padding-top: 1px;
+            color: $persian-orange;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            // line-height: 35px;
          }
       }
    }
