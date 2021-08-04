@@ -34,9 +34,10 @@ p {
 }
 
 .container .social {
-  position: absolute;
+  position: fixed;
   top: 120px;
-  left: 70px;
+  -webkit-transform: translateX(70px);
+          transform: translateX(70px);
   z-index: 2;
 }
 
@@ -203,7 +204,7 @@ a:hover {
 }
 
 .home__main-text {
-  margin: 190px 0 0 45px;
+  margin: 190px 0 0 70px;
   width: 52%;
 }
 
@@ -227,8 +228,8 @@ a:hover {
 }
 
 .home__main-text .heading__slider-text1 {
-  -webkit-animation: slidingText 8s linear infinite;
-          animation: slidingText 8s linear infinite;
+  -webkit-animation: slidingText 10s linear infinite;
+          animation: slidingText 10s linear infinite;
 }
 
 .home__main-clock-container {
