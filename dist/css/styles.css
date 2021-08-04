@@ -232,7 +232,7 @@ a:hover {
 }
 
 .home__main-clock-container {
-  margin: 100px 0 0 80px;
+  margin: 80px 0 0 80px;
   position: relative;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -325,6 +325,42 @@ a:hover {
   border: 2px solid #161719;
   border-radius: 50%;
   z-index: 2;
+}
+
+.home__main-digital-clock {
+  text-transform: uppercase;
+  text-align: center;
+  color: #9f703a;
+  font-size: 0.875rem;
+  position: absolute;
+  bottom: -38%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.home__main-digital-clock .time {
+  font-size: 60px;
+  color: #161719;
+  margin-top: 5px;
+}
+
+.home__main-digital-clock .date .circle-bg {
+  background-color: #161719;
+  padding-top: 1px;
+  color: #d69e5d;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @-webkit-keyframes slidingText {
