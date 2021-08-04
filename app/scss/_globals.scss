@@ -33,9 +33,9 @@ p {
 
    // Social link styles
    .social {
-      position: absolute;
+      position: fixed;
       top: 120px;
-      left: 70px;
+      transform: translateX(70px);
       z-index: 2;
 
       &__top-bar,
