@@ -74,10 +74,12 @@
       &-text {
          margin: 190px 0 0 70px;
          width: 52%;
+         // background-color: tomato;
          .heading {
             // width: 50%;
             height: 170px;
-            font-size: $font-xxl;
+            // font-size: $font-xxl;
+            font-size: $font-xxxl;
             font-weight: 400;
             overflow: hidden;
 
@@ -85,6 +87,7 @@
                margin-bottom: 0px;
                padding: 5px 0;
                height: 170px;
+               // background-color: green;
                box-sizing: border-box;
 
                &:nth-child(4) {
@@ -96,6 +99,12 @@
                animation: slidingText 10s linear infinite;
             }
          }
+
+         @include breakpoint-down(1279px) {
+            .heading {
+               font-size: $font-xxl;
+            }
+         }
       }
 
       &-clock-container {
@@ -104,6 +113,7 @@
          // box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
          // box-shadow: rgba(red, 1) 0px 2px 8px 0px;
          // width: 50%;
+         // background-color: teal;
          position: relative;
          // top: 50px;
          height: fit-content;
@@ -120,6 +130,11 @@
             box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
             border-radius: 50%;
             z-index: -2;
+         }
+
+         img {
+            width: 302px;
+            height: 302px;
          }
       }
 
@@ -199,8 +214,6 @@
       }
 
       &-digital-clock {
-         // background-color: tomato;
-         // color: $persian-orange;
          text-transform: uppercase;
          text-align: center;
          color: #9f703a;
@@ -211,7 +224,7 @@
          transform: translateX(-50%);
 
          .time {
-            font-size: 60px;
+            font-size: $font-xxl;
             color: $elgengrau;
             margin-top: 5px;
          }
@@ -234,27 +247,6 @@
    }
 
    @keyframes slidingText {
-      // 0% {
-      //    margin-top: -600px;
-      // }
-      // 5% {
-      //    margin-top: -450px;
-      // }
-      // 25% {
-      //    margin-top: -450px;
-      // }
-      // 30% {
-      //    margin-top: -300px;
-      // }
-      // 50% {
-      //    margin-top: -300px;
-      // }
-      // 55% {
-      //    margin-top: -150px;
-      // }
-      // 75% {
-      //    margin-top: -150px;
-      // }
       0% {
          margin-top: -680px;
       }
@@ -281,6 +273,86 @@
       }
       100% {
          margin-top: 0px;
+      }
+   }
+
+   @include breakpoint-down(1149px) {
+      &__main-text {
+         margin: 210px 0 0 20px;
+         width: 60%;
+         height: 140px;
+
+         .heading {
+            height: 140px;
+
+            div {
+               margin-top: 0;
+            }
+         }
+      }
+
+      &__main-clock-container {
+         margin: 100px 0 0 30px;
+
+         img {
+            width: 270px;
+            height: 270px;
+         }
+      }
+
+      &__main-digital-clock {
+         .time {
+            font-size: $font-xl;
+         }
+      }
+
+      &__main-clock {
+         & .hand.second {
+            bottom: 10px;
+            height: 16%;
+         }
+         // Center dot for second hand
+         & .center {
+            bottom: 6px;
+         }
+      }
+   }
+
+   @include breakpoint-down(1023px) {
+      &__main {
+         flex-direction: column;
+
+         &-text {
+            margin: 50px auto 0;
+            width: 100%;
+            text-align: center;
+         }
+
+         &-clock-container {
+            // position: relative;
+            // left: 50%;
+            transform: translateX(40%);
+            // background-color: coral;
+            width: 270px;
+            height: 270px;
+            // img {
+            //    left: 50%;
+            // }
+            margin-top: 40px;
+         }
+
+         &-digital-clock {
+            position: absolute;
+            // background-color: coral;
+
+            top: 35%;
+            bottom: 0;
+            transform: translateX(170%);
+
+            .time {
+               font-size: $font-xxl;
+            }
+         }
       }
    }
 }
