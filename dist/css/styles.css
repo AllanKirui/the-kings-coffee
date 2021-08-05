@@ -232,6 +232,12 @@ a:hover {
           animation: slidingText 10s linear infinite;
 }
 
+@media (max-width: 1279px) {
+  .home__main-text .heading {
+    font-size: 3.75rem;
+  }
+}
+
 .home__main-clock-container {
   margin: 80px 0 0 80px;
   position: relative;
@@ -251,6 +257,11 @@ a:hover {
           box-shadow: #26394d 0px 20px 30px -10px;
   border-radius: 50%;
   z-index: -2;
+}
+
+.home__main-clock-container img {
+  width: 302px;
+  height: 302px;
 }
 
 .home__main-clock {
@@ -341,7 +352,7 @@ a:hover {
 }
 
 .home__main-digital-clock .time {
-  font-size: 60px;
+  font-size: 3.75rem;
   color: #161719;
   margin-top: 5px;
 }
@@ -421,6 +432,68 @@ a:hover {
   }
   100% {
     margin-top: 0px;
+  }
+}
+
+@media (max-width: 1149px) {
+  .home__main-text {
+    margin: 210px 0 0 20px;
+    width: 60%;
+    height: 140px;
+  }
+  .home__main-text .heading {
+    height: 140px;
+  }
+  .home__main-text .heading div {
+    margin-top: 0;
+  }
+  .home__main-clock-container {
+    margin: 100px 0 0 30px;
+  }
+  .home__main-clock-container img {
+    width: 270px;
+    height: 270px;
+  }
+  .home__main-digital-clock .time {
+    font-size: 2.5rem;
+  }
+  .home__main-clock .hand.second {
+    bottom: 10px;
+    height: 16%;
+  }
+  .home__main-clock .center {
+    bottom: 6px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .home__main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .home__main-text {
+    margin: 50px auto 0;
+    width: 100%;
+    text-align: center;
+  }
+  .home__main-clock-container {
+    -webkit-transform: translateX(40%);
+            transform: translateX(40%);
+    width: 270px;
+    height: 270px;
+    margin-top: 40px;
+  }
+  .home__main-digital-clock {
+    position: absolute;
+    top: 35%;
+    bottom: 0;
+    -webkit-transform: translateX(170%);
+            transform: translateX(170%);
+  }
+  .home__main-digital-clock .time {
+    font-size: 3.75rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */
