@@ -31,7 +31,7 @@ p {
    height: 100vh;
    position: relative;
 
-   // Social link styles
+   // Social link styles for large devices
    .social {
       position: fixed;
       top: 120px;
@@ -77,6 +77,61 @@ p {
          }
       }
    }
+
+   // Social link styles for mobile devices
+   .social-mobile {
+      position: relative;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      z-index: 2;
+      margin-top: 12rem;
+      padding-bottom: 20px;
+
+      &__left-bar,
+      &__right-bar {
+         width: 60px;
+         height: 2px;
+         background-color: $elgengrau;
+      }
+
+      &__left-bar {
+         margin-right: 12px;
+      }
+
+      &__links {
+         // margin: 18px 0;
+         // background-color: tomato;
+
+         a {
+            margin-right: 12px;
+            transition: 300ms ease-in-out;
+
+            // &:not(:last-child) {
+            //    margin-bottom: 6px;
+            // }
+
+            &::before {
+               content: "";
+               position: absolute;
+               width: 30px;
+               height: 30px;
+               border-radius: 50%;
+               transition: box-shadow 300ms ease-in-out;
+
+               z-index: -1;
+            }
+
+            &:hover {
+               transform: translateY(-10px);
+
+               &::before {
+                  box-shadow: 2px 2px 7px $elgengrau, -2px -2px 7px $elgengrau;
+               }
+            }
+         }
+      }
+   }
 }
 
 .text-bold {
@@ -112,5 +167,23 @@ a:hover {
 
    &-fd-c {
       flex-direction: column;
+   }
+}
+
+// Helper classes
+.no-scroll {
+   overflow: hidden;
+}
+
+// Media queries
+@include breakpoint-down(749px) {
+   .social {
+      display: none;
+   }
+}
+
+@include breakpoint-up(750px) {
+   .social-mobile {
+      display: none;
    }
 }
