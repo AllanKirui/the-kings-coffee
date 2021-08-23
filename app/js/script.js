@@ -3,10 +3,6 @@ const burger = document.getElementById("burger");
 const menu = document.getElementById("menu");
 const body = document.querySelector("body");
 
-console.log(menu);
-console.log(menu);
-console.log(menu.children[0]);
-console.log(menu.children[0].children[0]);
 burger.addEventListener("click", () => {
    burger.classList.toggle("active");
    if (burger.classList.contains("active")) {
@@ -14,7 +10,6 @@ burger.addEventListener("click", () => {
       menu.style.visibility = "visible";
       menu.children[0].style.transform = "scale(1)";
       menu.children[0].style.transitionDuration = "0.75s";
-      // menu.children[0].setAttribute("transform", "scale(1)");
       menu.children[0].children[0].style.opacity = "1";
       menu.children[0].children[0].style.transition = "opacity 0.3s ease";
    } else {
@@ -23,17 +18,9 @@ burger.addEventListener("click", () => {
       menu.style.visibility = "hidden";
       menu.children[0].style.transform = "scale(0)";
       menu.children[0].style.transitionDuration = "0.75s";
-      // menu.children[0].setAttribute("transform", "scale(1)");
       menu.children[0].children[0].style.opacity = "0";
       menu.children[0].children[0].style.transition = "opacity 0.3s ease";
    }
-   // burger.classList.toggle("active");
-   // menu.style.visibility = "visible";
-   // menu.children[0].style.transform = "scale(1)";
-   // menu.children[0].style.transitionDuration = "0.75s";
-   // // menu.children[0].setAttribute("transform", "scale(1)");
-   // menu.children[0].children[0].style.opacity = "1";
-   // menu.children[0].children[0].style.transition = "opacity 0.3s ease";
 });
 
 // B. Clock functionality
