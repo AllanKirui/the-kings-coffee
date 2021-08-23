@@ -199,13 +199,13 @@ a:hover {
 }
 
 .home__header, .home__main {
-  padding: 0 120px;
+  padding: 0 7.5rem;
 }
 
 .home__header {
   position: relative;
   width: 100%;
-  height: 70px;
+  height: 4.375rem;
   background-color: #161719;
 }
 
@@ -218,7 +218,7 @@ a:hover {
 }
 
 .home__nav-logo {
-  margin-top: 25px;
+  margin-top: 1.5625rem;
   font-weight: 100;
   font-size: 1.75rem;
   -webkit-transition: color 300ms ease-in-out;
@@ -230,7 +230,7 @@ a:hover {
 }
 
 .home__nav-links {
-  margin-top: 28px;
+  margin-top: 1.75rem;
 }
 
 .home__nav-links a {
@@ -240,11 +240,11 @@ a:hover {
   font-weight: 300;
   -webkit-transition: color 300ms ease-in-out;
   transition: color 300ms ease-in-out;
-  padding: 10px 20px;
+  padding: 0.625rem 1.25rem;
 }
 
 .home__nav-links a:not(:last-child) {
-  margin-right: 24px;
+  margin-right: 1.5rem;
 }
 
 .home__nav-links a::before {
@@ -270,9 +270,9 @@ a:hover {
 }
 
 .home__nav-burger {
-  margin-top: 20px;
-  width: 45px;
-  height: 30px;
+  margin-top: 1.25rem;
+  width: 2.8125rem;
+  height: 1.875rem;
   background: url("../../img/kettle_closed.svg");
   background-repeat: no-repeat;
   background-position: right;
@@ -303,7 +303,7 @@ a:hover {
   background: #d69e5d;
   width: 90vw;
   height: 90vw;
-  max-width: 1440px;
+  max-width: 90rem;
   border-radius: 50%;
   -webkit-box-flex: 0;
       -ms-flex: none;
@@ -332,7 +332,7 @@ a:hover {
 }
 
 .home__header-menu a:not(:last-child) {
-  margin-bottom: 44px;
+  margin-bottom: 2.75rem;
 }
 
 .home__header-menu a:hover {
@@ -345,12 +345,12 @@ a:hover {
 }
 
 .home__main-text {
-  margin: 190px 0 0 70px;
+  margin: 11.875rem 0 0 4.375rem;
   width: 52%;
 }
 
 .home__main-text .heading {
-  height: 170px;
+  height: 10.625rem;
   font-size: 4.5rem;
   font-weight: 400;
   overflow: hidden;
@@ -359,13 +359,13 @@ a:hover {
 .home__main-text .heading div {
   margin-bottom: 0px;
   padding: 5px 0;
-  height: 170px;
+  height: 10.625rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 .home__main-text .heading div:nth-child(4) {
-  margin-top: 20px;
+  margin-top: 1.25rem;
 }
 
 .home__main-text .heading__slider-text1 {
@@ -380,7 +380,7 @@ a:hover {
 }
 
 .home__main-clock-container {
-  margin: 80px 0 0 80px;
+  margin: 5rem 0 0 5rem;
   position: relative;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -394,15 +394,15 @@ a:hover {
   left: 1px;
   width: 100%;
   height: 100%;
-  -webkit-box-shadow: #26394d 0px 20px 30px -10px;
-          box-shadow: #26394d 0px 20px 30px -10px;
+  -webkit-box-shadow: #26394d 0 1.25rem 1.875rem -0.625rem;
+          box-shadow: #26394d 0 1.25rem 1.875rem -0.625rem;
   border-radius: 50%;
   z-index: -2;
 }
 
 .home__main-clock-container img {
-  width: 302px;
-  height: 302px;
+  width: 18.875rem;
+  height: 18.875rem;
 }
 
 .home__main-clock {
@@ -411,8 +411,8 @@ a:hover {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 191.1px;
-  height: 191.1px;
+  width: 11.94375rem;
+  height: 11.94375rem;
   opacity: 0.9;
 }
 
@@ -423,8 +423,8 @@ a:hover {
   left: 50%;
   width: 3px;
   background-color: #000;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-top-left-radius: 0.625rem;
+  border-top-right-radius: 0.625rem;
   -webkit-transform-origin: bottom;
           transform-origin: bottom;
   -webkit-transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
@@ -502,8 +502,8 @@ a:hover {
   background-color: #161719;
   padding-top: 1px;
   color: #d69e5d;
-  width: 22px;
-  height: 22px;
+  width: 1.375rem;
+  height: 1.375rem;
   border-radius: 50%;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -518,25 +518,25 @@ a:hover {
 
 @-webkit-keyframes slidingText {
   0% {
-    margin-top: -680px;
+    margin-top: -42.5rem;
   }
   5% {
-    margin-top: -510px;
+    margin-top: -31.875rem;
   }
   25% {
-    margin-top: -510px;
+    margin-top: -31.875rem;
   }
   30% {
-    margin-top: -340px;
+    margin-top: -21.25rem;
   }
   50% {
-    margin-top: -340px;
+    margin-top: -21.25rem;
   }
   55% {
-    margin-top: -170px;
+    margin-top: -10.625rem;
   }
   75% {
-    margin-top: -170px;
+    margin-top: -10.625rem;
   }
   80% {
     margin-top: 0px;
@@ -548,25 +548,25 @@ a:hover {
 
 @keyframes slidingText {
   0% {
-    margin-top: -680px;
+    margin-top: -42.5rem;
   }
   5% {
-    margin-top: -510px;
+    margin-top: -31.875rem;
   }
   25% {
-    margin-top: -510px;
+    margin-top: -31.875rem;
   }
   30% {
-    margin-top: -340px;
+    margin-top: -21.25rem;
   }
   50% {
-    margin-top: -340px;
+    margin-top: -21.25rem;
   }
   55% {
-    margin-top: -170px;
+    margin-top: -10.625rem;
   }
   75% {
-    margin-top: -170px;
+    margin-top: -10.625rem;
   }
   80% {
     margin-top: 0px;
@@ -578,22 +578,22 @@ a:hover {
 
 @media (max-width: 1149px) {
   .home__main-text {
-    margin: 210px 0 0 20px;
+    margin: 13.125rem 0 0 1.25rem;
     width: 60%;
-    height: 140px;
+    height: 8.75rem;
   }
   .home__main-text .heading {
-    height: 140px;
+    height: 8.75rem;
   }
   .home__main-text .heading div {
     margin-top: 0;
   }
   .home__main-clock-container {
-    margin: 100px 0 0 30px;
+    margin: 6.25rem 0 0 1.875rem;
   }
   .home__main-clock-container img {
-    width: 270px;
-    height: 270px;
+    width: 16.875rem;
+    height: 16.875rem;
   }
   .home__main-digital-clock .time {
     font-size: 2.5rem;
@@ -615,16 +615,16 @@ a:hover {
             flex-direction: column;
   }
   .home__main-text {
-    margin: 50px auto 0;
+    margin: 3.125rem auto 0;
     width: 100%;
     text-align: center;
   }
   .home__main-clock-container {
     -webkit-transform: translateX(40%);
             transform: translateX(40%);
-    width: 270px;
-    height: 270px;
-    margin-top: 40px;
+    width: 16.875rem;
+    height: 16.875rem;
+    margin-top: 2.5rem;
   }
   .home__main-digital-clock {
     position: absolute;
@@ -652,13 +652,13 @@ a:hover {
 
 @media (max-width: 869px) {
   .home__header, .home__main {
-    padding: 0 80px;
+    padding: 0 5rem;
   }
 }
 
 @media (max-width: 749px) {
   .home__main-text {
-    margin: 50px auto 0;
+    margin: 3.125rem auto 0;
     width: 100%;
     text-align: center;
   }
@@ -667,14 +667,14 @@ a:hover {
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
-    width: 270px;
-    height: 270px;
-    margin-top: 40px;
+    width: 16.875rem;
+    height: 16.875rem;
+    margin-top: 2.5rem;
     margin-left: 0;
   }
   .home__main-digital-clock {
     position: relative;
-    top: 30px;
+    top: 1.875rem;
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
@@ -686,17 +686,17 @@ a:hover {
 
 @media (max-width: 599px) {
   .home__nav-logo {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
   .home__header, .home__main {
-    padding: 0 30px;
+    padding: 0 1.875rem;
   }
   .home__main-text {
-    height: 100px;
+    height: 6.25rem;
   }
   .home__main-text .heading {
     font-size: 2.5rem;
-    height: 100px;
+    height: 6.25rem;
   }
   .home__main-text .heading > div:nth-child(4) {
     margin-top: 0;
