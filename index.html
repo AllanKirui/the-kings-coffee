@@ -13,7 +13,8 @@
       />
 
       <link rel="stylesheet" href="dist/css/styles.css" />
-      <script src="app/js/script.js" defer></script>
+      <script src="app/js/global.js" defer></script>
+      <script src="app/js/clock.js" defer></script>
    </head>
    <body>
       <!-- Homepage -->
@@ -125,26 +126,26 @@
          </div>
 
          <!-- Navigation bar -->
-         <header class="home__header">
-            <nav class="home__nav flex flex-jc-sb">
-               <a href="#" class="home__nav-logo"
+         <header class="header">
+            <nav class="nav flex flex-jc-sb">
+               <a href="#" class="nav-logo"
                   >the<span class="text-bold">KING'S</span>COFFEE</a
                >
-               <div class="home__nav-links">
-                  <a href="#">home</a>
-                  <a href="#">menu</a>
+               <div class="nav-links">
+                  <a href="index.html">home</a>
+                  <a href="menu.html">menu</a>
                   <a href="#">gallery</a>
                   <a href="#">find us</a>
                </div>
 
-               <div id="burger" class="home__nav-burger"></div>
+               <div id="burger" class="nav-burger"></div>
             </nav>
 
-            <div id="menu" class="home__header-menu flex flex-ai-c flex-jc-c">
+            <div id="menu" class="mobile-menu flex flex-ai-c flex-jc-c">
                <div class="flex flex-ai-c flex-jc-c">
                   <div class="flex flex-fd-c flex-ai-c flex-jc-c">
-                     <a href="#">home</a>
-                     <a href="#">menu</a>
+                     <a href="index.html">home</a>
+                     <a href="menu.html">menu</a>
                      <a href="#">gallery</a>
                      <a href="#">find us</a>
                   </div>
@@ -199,6 +200,7 @@
             </div>
          </main>
 
+         <!-- Social links for mobile -->
          <div class="social-mobile flex flex-ai-c flex-jc-c">
             <div class="social-mobile__left-bar"></div>
             <div class="social-mobile__links flex">
