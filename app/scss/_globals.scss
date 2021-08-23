@@ -25,10 +25,10 @@ p {
 }
 
 .container {
-   margin: 0 auto;
-   max-width: 87.5rem;
-   height: 100vh;
    position: relative;
+   margin: 0 auto;
+   max-width: toRem(1400);
+   height: 100vh;
 
    // Navigation styles
    .header {
@@ -162,32 +162,32 @@ p {
    // Social link styles for large devices
    .social {
       position: fixed;
-      top: 120px;
-      transform: translateX(70px);
+      top: toRem(120);
+      transform: translateX(toRem(70));
       z-index: 2;
 
       &__top-bar,
       &__bottom-bar {
          width: 2px;
-         height: 120px;
+         height: toRem(120);
          background-color: $elgengrau;
       }
 
       &__links {
-         margin: 18px 0;
+         margin: toRem(18) 0;
 
          a {
             transition: 300ms ease-in-out;
 
             &:not(:last-child) {
-               margin-bottom: 6px;
+               margin-bottom: toRem(6);
             }
 
             &::before {
                content: "";
                position: absolute;
-               width: 30px;
-               height: 30px;
+               width: toRem(30);
+               height: toRem(30);
                border-radius: 50%;
                transition: box-shadow 300ms ease-in-out;
 
@@ -212,30 +212,30 @@ p {
       bottom: 0;
       transform: translateX(-50%);
       z-index: 2;
-      margin-top: 12rem;
-      padding-bottom: 20px;
+      margin-top: toRem(192);
+      padding-bottom: toRem(20);
 
       &__left-bar,
       &__right-bar {
-         width: 60px;
+         width: toRem(60);
          height: 2px;
          background-color: $elgengrau;
       }
 
       &__left-bar {
-         margin-right: 12px;
+         margin-right: toRem(12);
       }
 
       &__links {
          a {
-            margin-right: 12px;
+            margin-right: toRem(12);
             transition: 300ms ease-in-out;
 
             &::before {
                content: "";
                position: absolute;
-               width: 30px;
-               height: 30px;
+               width: toRem(30);
+               height: toRem(30);
                border-radius: 50%;
                transition: box-shadow 300ms ease-in-out;
 
