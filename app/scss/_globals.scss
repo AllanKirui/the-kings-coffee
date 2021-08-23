@@ -27,7 +27,6 @@ p {
 .container {
    margin: 0 auto;
    max-width: 87.5rem;
-   // height: 50rem;
    height: 100vh;
    position: relative;
 
@@ -47,7 +46,6 @@ p {
 
       &__links {
          margin: 18px 0;
-         // background-color: tomato;
 
          a {
             transition: 300ms ease-in-out;
@@ -100,16 +98,9 @@ p {
       }
 
       &__links {
-         // margin: 18px 0;
-         // background-color: tomato;
-
          a {
             margin-right: 12px;
             transition: 300ms ease-in-out;
-
-            // &:not(:last-child) {
-            //    margin-bottom: 6px;
-            // }
 
             &::before {
                content: "";
@@ -132,14 +123,6 @@ p {
          }
       }
    }
-}
-
-.text-bold {
-   font-weight: 700;
-}
-
-.text-italic {
-   font-style: italic;
 }
 
 // Reset links
@@ -173,6 +156,14 @@ a:hover {
 // Helper classes
 .no-scroll {
    overflow: hidden;
+}
+
+.text-bold {
+   font-weight: 700;
+}
+
+.text-italic {
+   font-style: italic;
 }
 
 // Media queries
