@@ -30,6 +30,135 @@ p {
    height: 100vh;
    position: relative;
 
+   // Navigation styles
+   .header {
+      position: relative;
+      width: 100%;
+      height: toRem(70);
+      padding: 0 toRem(120);
+      background-color: $elgengrau;
+   }
+
+   .nav {
+      position: relative;
+      a {
+         color: $antique-white;
+      }
+
+      &-logo {
+         margin-top: toRem(25);
+         font-weight: 100;
+         font-size: $font-lg;
+         transition: color 300ms ease-in-out;
+
+         &:hover {
+            color: $persian-orange;
+         }
+      }
+
+      &-links {
+         margin-top: toRem(28);
+
+         a {
+            position: relative;
+            text-transform: uppercase;
+            font-size: $font-sm;
+            font-weight: 300;
+            transition: color 300ms ease-in-out;
+            padding: toRem(10) toRem(20);
+
+            &:not(:last-child) {
+               margin-right: toRem(24);
+            }
+
+            &::before {
+               content: "";
+               display: block;
+               position: absolute;
+               height: 2px;
+               left: 0;
+               right: 0;
+               bottom: -13px;
+               background: $persian-orange;
+               opacity: 0;
+               transition: opacity 300ms ease-in-out;
+            }
+
+            &:hover {
+               color: $persian-orange;
+
+               &::before {
+                  opacity: 1;
+               }
+            }
+         }
+      }
+
+      &-burger {
+         margin-top: toRem(20);
+         width: toRem(45);
+         height: toRem(30);
+         background: url("../../img/kettle_closed.svg");
+         background-repeat: no-repeat;
+         background-position: right;
+         z-index: 4;
+         transition: 0.2s ease-in;
+         cursor: pointer;
+
+         &.active {
+            background: url("../../img/kettle_opened.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+         }
+      }
+   }
+
+   .mobile-menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      visibility: hidden;
+      overflow: hidden;
+      z-index: 3;
+
+      & > div {
+         background: $persian-orange;
+         width: 90vw;
+         height: 90vw;
+         max-width: toRem(1440);
+         border-radius: 50%;
+         flex: none;
+         transform: scale(0);
+         transition: all 0.3s ease;
+      }
+
+      & > div > div {
+         text-align: center;
+         max-width: 90vw;
+         max-height: 100vh;
+         opacity: 0;
+         z-index: 5;
+      }
+
+      a {
+         text-transform: uppercase;
+         color: $elgengrau;
+         font-size: $font-nm;
+         transition: all 200ms ease-in-out;
+         position: relative;
+
+         &:not(:last-child) {
+            margin-bottom: toRem(44);
+         }
+
+         &:hover {
+            transform: scale(1.1);
+         }
+      }
+   }
+
    // Social link styles for large devices
    .social {
       position: fixed;
@@ -167,6 +296,26 @@ a:hover {
 }
 
 // Media queries
+@include breakpoint-down(979px) {
+   .nav-links {
+      display: none;
+   }
+}
+
+@include breakpoint-up(980px) {
+   .nav-burger {
+      display: none;
+   }
+}
+
+@include breakpoint-down(869px) {
+   .container {
+      .header {
+         padding: 0 toRem(80);
+      }
+   }
+}
+
 @include breakpoint-down(749px) {
    .social {
       display: none;
@@ -176,5 +325,24 @@ a:hover {
 @include breakpoint-up(750px) {
    .social-mobile {
       display: none;
+   }
+}
+
+@include breakpoint-down(599px) {
+   .container {
+      .header {
+         padding: 0 toRem(30);
+      }
+
+      .nav-logo {
+         font-size: toRem(24);
+      }
+
+      .mobile-menu {
+         & > div {
+            width: 140vw;
+            height: 140vw;
+         }
+      }
    }
 }
