@@ -37,10 +37,12 @@ p {
       height: toRem(70);
       padding: 0 toRem(120);
       background-color: $elgengrau;
+      z-index: 3;
    }
 
    .nav {
       position: relative;
+
       a {
          color: $antique-white;
       }
@@ -252,6 +254,38 @@ p {
          }
       }
    }
+
+   // Page intro styles for inner pages
+   .intro {
+      padding: 0 toRem(160);
+   }
+
+   .page-title {
+      position: relative;
+      top: toRem(-21);
+      z-index: 1;
+
+      & > span {
+         color: $elgengrau;
+         font-size: $font-xxxl;
+         font-weight: bold;
+         text-transform: uppercase;
+         line-height: toRem(60);
+      }
+   }
+
+   .page-quote {
+      margin-top: toRem(55);
+      font-size: $font-xl;
+      text-transform: uppercase;
+   }
+
+   .coffee-bean-logo {
+      img {
+         width: toRem(351);
+         height: toRem(117);
+      }
+   }
 }
 
 // Reset links
@@ -293,6 +327,11 @@ a:hover {
 
 .text-italic {
    font-style: italic;
+}
+
+.text-with-stroke {
+   color: $antique-white !important;
+   -webkit-text-stroke: 1.5px $elgengrau;
 }
 
 // Media queries
