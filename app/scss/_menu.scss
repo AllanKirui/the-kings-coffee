@@ -80,4 +80,26 @@
       text-align: center;
       // color: $elgengrau;
    }
+
+   // Coffee mugs styles
+   .coffee-mugs {
+      font-family: "Poppins", sans-serif;
+      margin-bottom: toRem(65);
+
+      .promo-text {
+         // font-family: "Poppins", sans-serif;
+         margin-bottom: toRem(22);
+         text-align: center;
+         font-size: $font-sm;
+      }
+
+      .promo-images {
+         align-items: baseline;
+         gap: toRem(25);
+
+         p {
+            text-align: center;
+         }
+      }
+   }
 }
