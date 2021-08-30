@@ -282,8 +282,16 @@ p {
 
    .coffee-bean-logo {
       img {
+         margin: 0 auto;
          width: toRem(351);
          height: toRem(117);
+      }
+
+      p {
+         margin-top: toRem(5);
+         font-family: "Poppins", sans-serif;
+         font-size: $font-sm;
+         text-align: center;
       }
    }
 }
@@ -313,6 +321,10 @@ a:hover {
 
    &-fd-c {
       flex-direction: column;
+   }
+
+   &-fw-w {
+      flex-wrap: wrap;
    }
 }
 
