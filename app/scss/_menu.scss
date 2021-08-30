@@ -1,3 +1,83 @@
 .menu {
    font-family: "Josefin Sans", sans-serif;
+   // padding-bottom: toRem(50);
+   // background-color: red;
+   // Coffee menu styles
+   .coffee-menu {
+      padding: 0 toRem(100);
+      // padding: 0 toRem(160);
+      // margin-top: toRem(50);
+      margin-top: toRem(50);
+      margin-bottom: toRem(50);
+      // background-color: tomato;
+      gap: toRem(60);
+   }
+
+   .menu-item {
+      padding-top: toRem(50);
+      min-width: toRem(300);
+      // background-color: teal;
+      border-radius: 10px;
+      // box-shadow: 2px 2px 5px #ddd, -2px -2px 5px #eee;
+      // box-shadow: 2px 2px 20px #d4bea5, -2px -2px 20px #d4bea5;
+      box-shadow: 0.1px 0.1px 2px #d4bea5, -0.1px -0.1px 2px #d4bea5;
+      transition: 300ms ease-in-out;
+
+      &:hover {
+         box-shadow: 2px 2px 20px #d4bea5, -2px -2px 20px #d4bea5;
+         // box-shadow: 1rem 1rem 2rem #d4bea5, -1rem -1rem 2rem #d4bea5;
+      }
+   }
+
+   .menu-title {
+      text-transform: uppercase;
+      text-align: center;
+      font-size: $font-lg;
+      // width: 50%;
+      position: relative;
+   }
+
+   .menu-content {
+      padding: 0;
+      margin: toRem(30) auto toRem(15);
+      position: relative;
+      width: 80%;
+      // background-color: lawngreen;
+
+      li {
+         // background-color: orange;
+         list-style-type: none;
+         text-transform: capitalize;
+         font-family: "Poppins", sans-serif;
+
+         .price {
+            font-weight: bold;
+
+            img {
+               margin-right: 5px;
+            }
+         }
+      }
+
+      &::before {
+         content: "";
+         position: absolute;
+         top: -17px;
+         left: 0;
+         // transform: translateX(-20%);
+         // top: 0;
+         width: 100%;
+         height: 1px;
+         background-color: $elgengrau;
+      }
+   }
+
+   .add-on {
+      // font-style: italic;
+      margin-bottom: toRem(10);
+      font-size: $font-sm;
+      font-weight: 400;
+      text-align: center;
+      // color: $elgengrau;
+   }
 }
