@@ -298,8 +298,16 @@ p {
 }
 
 .container .coffee-bean-logo img {
+  margin: 0 auto;
   width: 21.9375rem;
   height: 7.3125rem;
+}
+
+.container .coffee-bean-logo p {
+  margin-top: 0.3125rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.875rem;
+  text-align: center;
 }
 
 a,
@@ -337,6 +345,11 @@ a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.flex-fw-w {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .no-scroll {
@@ -754,5 +767,72 @@ a:hover {
 
 .menu {
   font-family: "Josefin Sans", sans-serif;
+}
+
+.menu .coffee-menu {
+  padding: 0 6.25rem;
+  margin-top: 3.125rem;
+  margin-bottom: 3.125rem;
+  gap: 3.75rem;
+}
+
+.menu .menu-item {
+  padding-top: 3.125rem;
+  min-width: 18.75rem;
+  border-radius: 10px;
+  -webkit-box-shadow: 0.1px 0.1px 2px #d4bea5, -0.1px -0.1px 2px #d4bea5;
+          box-shadow: 0.1px 0.1px 2px #d4bea5, -0.1px -0.1px 2px #d4bea5;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+}
+
+.menu .menu-item:hover {
+  -webkit-box-shadow: 2px 2px 20px #d4bea5, -2px -2px 20px #d4bea5;
+          box-shadow: 2px 2px 20px #d4bea5, -2px -2px 20px #d4bea5;
+}
+
+.menu .menu-title {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.75rem;
+  position: relative;
+}
+
+.menu .menu-content {
+  padding: 0;
+  margin: 1.875rem auto 0.9375rem;
+  position: relative;
+  width: 80%;
+}
+
+.menu .menu-content li {
+  list-style-type: none;
+  text-transform: capitalize;
+  font-family: "Poppins", sans-serif;
+}
+
+.menu .menu-content li .price {
+  font-weight: bold;
+}
+
+.menu .menu-content li .price img {
+  margin-right: 5px;
+}
+
+.menu .menu-content::before {
+  content: "";
+  position: absolute;
+  top: -17px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #161719;
+}
+
+.menu .add-on {
+  margin-bottom: 0.625rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  text-align: center;
 }
 /*# sourceMappingURL=styles.css.map */
