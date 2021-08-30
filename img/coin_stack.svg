@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="21"
+   height="18"
+   viewBox="0 0 5.5562499 4.7625001"
+   version="1.1"
+   id="svg18309"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15, custom)"
+   sodipodi:docname="coin_stack.svg">
+  <defs
+     id="defs18303" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="7.9195959"
+     inkscape:cx="-4.3413695"
+     inkscape:cy="15.062146"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1267"
+     inkscape:window-height="728"
+     inkscape:window-x="83"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata18306">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g16903"
+       transform="matrix(0.01334624,0,0,0.01334624,0.09299299,-0.27450215)"
+       style="fill:#161719;fill-opacity:1">
+      <g
+         id="g16871"
+         style="fill:#161719;fill-opacity:1">
+        <g
+           id="g16869"
+           style="fill:#161719;fill-opacity:1">
+          <path
+             d="m 116.682,229.329 c 11.286,0 22.195,-0.729 32.518,-2.086 V 114.094 c -10.322,-1.356 -21.232,-2.085 -32.518,-2.085 -64.441,0 -116.681,23.693 -116.681,52.921 v 11.477 c 0,29.227 52.24,52.922 116.681,52.922 z"
+             id="path16853"
+             style="fill:#161719;fill-opacity:1" />
+          <path
+             d="m 116.682,288.411 c 11.286,0 22.195,-0.729 32.518,-2.084 v -33.166 c -10.325,1.356 -21.229,2.095 -32.518,2.095 -56.25,0 -103.199,-18.054 -114.227,-42.082 -1.606,3.5 -2.454,7.124 -2.454,10.839 v 11.477 c 0,29.228 52.24,52.921 116.681,52.921 z"
+             id="path16855"
+             style="fill:#161719;fill-opacity:1" />
+          <path
+             d="m 149.199,314.823 v -2.578 c -10.325,1.356 -21.229,2.095 -32.518,2.095 C 60.431,314.34 13.482,296.286 2.454,272.258 0.848,275.757 0,279.381 0,283.096 v 11.477 c 0,29.229 52.24,52.922 116.681,52.922 12.887,0 25.282,-0.95 36.873,-2.7 -2.873,-5.877 -4.355,-12.075 -4.355,-18.496 z"
+             id="path16857"
+             style="fill:#161719;fill-opacity:1" />
+          <path
+             d="m 284.92,22.379 c -64.441,0 -116.681,23.693 -116.681,52.921 v 11.477 c 0,29.228 52.24,52.921 116.681,52.921 64.44,0 116.681,-23.693 116.681,-52.921 V 75.3 c 0,-29.228 -52.241,-52.921 -116.681,-52.921 z"
+             id="path16859"
+             style="fill:#161719;fill-opacity:1" />
+          <path
+             d="m 284.92,165.626 c -56.25,0 -103.199,-18.053 -114.227,-42.082 -1.606,3.499 -2.454,7.123 -2.454,10.839 v 11.477 c 0,29.228 52.24,52.921 116.681,52.921 64.44,0 116.681,-23.693 116.681,-52.921 v -11.477 c 0,-3.716 -0.848,-7.34 -2.454,-10.839 -11.028,24.029 -57.977,42.082 -114.227,42.082 z"
+             id="path16861"
+             style="fill:#161719;fill-opacity:1" />
+          <path
+             d="m 284.92,224.71 c -56.25,0 -103.199,-18.054 -114.227,-42.082 -1.606,3.499 -2.454,7.123 -2.454,10.839 v 11.477 c 0,29.229 52.24,52.922 116.681,52.922 64.44,0 116.681,-23.693 116.681,-52.922 v -11.477 c 0,-3.716 -0.848,-7.34 -2.454,-10.839 -11.028,24.029 -57.977,42.082 -114.227,42.082 z"
+             id="path16863"
+             style="fill:#161719;fill-opacity:1" />
+          <path
+             d="m 284.92,286.983 c -56.25,0 -103.199,-18.054 -114.227,-42.082 -1.606,3.5 -2.454,7.123 -2.454,10.838 v 11.478 c 0,29.228 52.24,52.921 116.681,52.921 64.44,0 116.681,-23.693 116.681,-52.921 v -11.478 c 0,-3.715 -0.848,-7.34 -2.454,-10.838 -11.028,24.027 -57.977,42.082 -114.227,42.082 z"
+             id="path16865"
+             style="fill:#161719;fill-opacity:1" />
+          <path
+             d="m 284.92,346.066 c -56.25,0 -103.199,-18.053 -114.227,-42.081 -1.606,3.5 -2.454,7.125 -2.454,10.838 V 326.3 c 0,29.228 52.24,52.921 116.681,52.921 64.44,0 116.681,-23.693 116.681,-52.921 v -11.478 c 0,-3.715 -0.848,-7.34 -2.454,-10.838 -11.028,24.028 -57.977,42.082 -114.227,42.082 z"
+             id="path16867"
+             style="fill:#161719;fill-opacity:1" />
+        </g>
+      </g>
+      <g
+         id="g16873"
+         style="fill:#161719;fill-opacity:1" />
+      <g
+         id="g16875"
+         style="fill:#161719;fill-opacity:1" />
+      <g
+         id="g16877"
+         style="fill:#161719;fill-opacity:1" />
+      <g
+         id="g16879"
+         style="fill:#161719;fill-opacity:1" />
+      <g
+         id="g16881"
+         style="fill:#161719;fill-opacity:1" />
+      <g
+         id="g16883"
+         style="fill:#161719;fill-opacity:1" />
+      <g
+         id="g16885"
+         style="fill:#161719;fill-opacity:1" />
+      <g
+         id="g16887"
+         style="fill:#161719;fill-opacity:1" />
+      <g
+         id="g16889"
+         style="fill:#161719;fill-opacity:1" />
+      <g
+         id="g16891"
+         style="fill:#161719;fill-opacity:1" />
+      <g
+         id="g16893"
+         style="fill:#161719;fill-opacity:1" />
+      <g
+         id="g16895"
+         style="fill:#161719;fill-opacity:1" />
+      <g
+         id="g16897"
+         style="fill:#161719;fill-opacity:1" />
+      <g
+         id="g16899"
+         style="fill:#161719;fill-opacity:1" />
+      <g
+         id="g16901"
+         style="fill:#161719;fill-opacity:1" />
+    </g>
+  </g>
+</svg>
