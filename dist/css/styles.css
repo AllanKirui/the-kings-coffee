@@ -857,4 +857,93 @@ a:hover {
 .menu .coffee-mugs .promo-images p {
   text-align: center;
 }
+
+.menu .testimonials {
+  padding-bottom: 3.75rem;
+}
+
+.menu .testimonials h3 {
+  text-align: center;
+  margin-bottom: 2.8125rem;
+}
+
+.menu .testimonials .testimonial-container {
+  margin: 0 auto;
+  padding: 0 1.875rem;
+  max-width: 40rem;
+  min-height: 18.75rem;
+  border: 1px solid #161719;
+  border-radius: 10px;
+  position: relative;
+}
+
+.menu .testimonials .testimonial-container .bg-img-1,
+.menu .testimonials .testimonial-container .bg-img-2,
+.menu .testimonials .testimonial-container .bg-img-3 {
+  position: absolute;
+  width: 3.75rem;
+  height: 3.75rem;
+  z-index: -1;
+}
+
+.menu .testimonials .testimonial-container .bg-img-1 {
+  top: 2.5rem;
+  left: 6.25rem;
+  background-image: url(../../img/bg_img_1.svg);
+  background-repeat: no-repeat;
+}
+
+.menu .testimonials .testimonial-container .bg-img-2 {
+  top: 9.375rem;
+  left: 14.375rem;
+  background-image: url(../../img/bg_img_2.svg);
+  background-repeat: no-repeat;
+}
+
+.menu .testimonials .testimonial-container .bg-img-3 {
+  top: 13.125rem;
+  left: 3.125rem;
+  background-image: url(../../img/bg_img_3.svg);
+  background-repeat: no-repeat;
+}
+
+.menu .testimonials .testimonial-left {
+  margin-right: 1.25rem;
+}
+
+.menu .testimonials .testimonial-left .progress-bar {
+  background-color: #d69e5d;
+  height: 4px;
+  width: 100%;
+  -webkit-animation: grow 12s linear infinite;
+          animation: grow 12s linear infinite;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  margin-bottom: 1.25rem;
+}
+
+.menu .testimonials .testimonial-left p {
+  text-align: justify;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+}
+
+.menu .testimonials .testimonial-right .customer-img {
+  width: 11.25rem;
+  height: 11.25rem;
+}
+
+@-webkit-keyframes grow {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+}
+
+@keyframes grow {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+}
 /*# sourceMappingURL=styles.css.map */
