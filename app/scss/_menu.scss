@@ -15,7 +15,7 @@
 
    .menu-item {
       padding-top: toRem(50);
-      min-width: toRem(300);
+      width: toRem(300);
       // background-color: teal;
       border-radius: 10px;
       // box-shadow: 2px 2px 5px #ddd, -2px -2px 5px #eee;
@@ -179,9 +179,111 @@
       }
    }
 
+   .social-mobile {
+      margin-top: toRem(70);
+   }
+
+   // Animations
    @keyframes grow {
       0% {
          transform: scaleX(0);
+      }
+   }
+
+   // Media queries
+   @include breakpoint-down(979px) {
+      .coffee-menu {
+         gap: toRem(40);
+      }
+   }
+
+   @include breakpoint-down(849px) {
+      .coffee-menu {
+         gap: toRem(40);
+      }
+
+      .menu-item {
+         // padding: 0;
+         // width: 280px !important;
+         width: clamp(toRem(300), toRem(380), toRem(450));
+      }
+
+      .testimonials {
+         padding: 0 toRem(120);
+
+         .testimonial-right {
+            .customer-image {
+               width: toRem(150);
+               height: toRem(150);
+            }
+         }
+      }
+   }
+
+   @include breakpoint-down(749px) {
+      .testimonials {
+         padding: 0 toRem(80);
+
+         h3 {
+            margin-bottom: toRem(60);
+         }
+
+         .testimonial-container {
+            padding-top: toRem(40);
+         }
+
+         .testimonial-left {
+            margin-right: toRem(0);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+         }
+
+         .testimonial-right {
+            .customer-image {
+               position: absolute;
+               // bottom: 6%;
+               top: -10%;
+               // right: 10%;
+               left: 50%;
+               transform: translateX(-50%);
+               width: toRem(100);
+               height: toRem(100);
+            }
+         }
+      }
+   }
+
+   @include breakpoint-down(599px) {
+      .coffee-menu {
+         padding: 0 toRem(30);
+      }
+
+      .coffee-mugs {
+         .promo-text {
+            padding: 0 toRem(30);
+            text-align: center;
+            font-size: $font-sm;
+         }
+      }
+
+      .promo-images {
+         flex-wrap: wrap;
+         justify-content: center;
+      }
+
+      .testimonials {
+         padding: 0 toRem(30);
+
+         .testimonial-container {
+            padding-left: toRem(20);
+            padding-right: toRem(20);
+
+            .bg-img-2 {
+               left: toRem(200);
+            }
+         }
       }
    }
 }
