@@ -283,8 +283,8 @@ p {
    .coffee-bean-logo {
       img {
          margin: 0 auto;
-         width: toRem(351);
-         height: toRem(117);
+         max-width: toRem(351);
+         // height: toRem(117);
       }
 
       p {
@@ -347,9 +347,33 @@ a:hover {
 }
 
 // Media queries
+@include breakpoint-down(1099px) {
+   .container {
+      .intro {
+         padding: 0 toRem(100);
+      }
+   }
+}
+
 @include breakpoint-down(979px) {
-   .nav-links {
-      display: none;
+   .container {
+      .nav-links {
+         display: none;
+      }
+
+      .intro {
+         .page-title {
+            top: toRem(-20);
+
+            & > span {
+               font-size: toRem(60);
+               line-height: toRem(55);
+            }
+         }
+         .page-quote {
+            font-size: toRem(32);
+         }
+      }
    }
 }
 
@@ -370,6 +394,24 @@ a:hover {
 @include breakpoint-down(749px) {
    .social {
       display: none;
+   }
+
+   .container {
+      .intro-text {
+         flex-wrap: wrap;
+         justify-content: center;
+         align-items: center;
+      }
+
+      .page-title {
+         margin: 0;
+         padding: 0;
+      }
+
+      .page-quote {
+         margin: 0 0 toRem(28);
+         text-align: center;
+      }
    }
 }
 
@@ -393,6 +435,17 @@ a:hover {
          & > div {
             width: 140vw;
             height: 140vw;
+         }
+      }
+
+      .intro {
+         padding: 0 toRem(30);
+
+         .coffee-bean-logo {
+            position: relative;
+            img {
+               width: 80vw;
+            }
          }
       }
    }
