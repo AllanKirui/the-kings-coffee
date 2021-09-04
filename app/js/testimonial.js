@@ -1,5 +1,4 @@
 // Testimonial switching functionality
-// Grab elements from the DOM
 const testimonial = document.querySelector(".testimonial-text");
 const customerImage = document.querySelector(".customer-image");
 const customerName = document.querySelector(".customer-name");
@@ -13,7 +12,7 @@ const testimonialsDB = [
    },
    {
       name: "Phillip",
-      photo: "../img/customer-2.png",
+      photo: "../../img/customer-2.png",
       text: '"I stumbled across this place and so glad I did. Really amazing buzzing vibe with quirky interior. More importantly, the coffee is superb so much so I brought some home. The varied menu and staff are great!"',
    },
    {
@@ -45,5 +44,5 @@ function updateTestimonial() {
    }
 }
 
-// Call the function every 10 seconds
+// Call the function every 12 seconds
 setInterval(updateTestimonial, 12000);
