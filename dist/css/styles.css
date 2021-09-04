@@ -299,8 +299,7 @@ p {
 
 .container .coffee-bean-logo img {
   margin: 0 auto;
-  width: 21.9375rem;
-  height: 7.3125rem;
+  max-width: 21.9375rem;
 }
 
 .container .coffee-bean-logo p {
@@ -369,9 +368,25 @@ a:hover {
   -webkit-text-stroke: 1.5px #161719;
 }
 
+@media (max-width: 1099px) {
+  .container .intro {
+    padding: 0 6.25rem;
+  }
+}
+
 @media (max-width: 979px) {
-  .nav-links {
+  .container .nav-links {
     display: none;
+  }
+  .container .intro .page-title {
+    top: -1.25rem;
+  }
+  .container .intro .page-title > span {
+    font-size: 3.75rem;
+    line-height: 3.4375rem;
+  }
+  .container .intro .page-quote {
+    font-size: 2rem;
   }
 }
 
@@ -391,6 +406,24 @@ a:hover {
   .social {
     display: none;
   }
+  .container .intro-text {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .container .page-title {
+    margin: 0;
+    padding: 0;
+  }
+  .container .page-quote {
+    margin: 0 0 1.75rem;
+    text-align: center;
+  }
 }
 
 @media (min-width: 750px) {
@@ -409,6 +442,15 @@ a:hover {
   .container .mobile-menu > div {
     width: 140vw;
     height: 140vw;
+  }
+  .container .intro {
+    padding: 0 1.875rem;
+  }
+  .container .intro .coffee-bean-logo {
+    position: relative;
+  }
+  .container .intro .coffee-bean-logo img {
+    width: 80vw;
   }
 }
 
@@ -778,7 +820,7 @@ a:hover {
 
 .menu .menu-item {
   padding-top: 3.125rem;
-  min-width: 18.75rem;
+  width: 18.75rem;
   border-radius: 10px;
   -webkit-box-shadow: 0.1px 0.1px 2px #d4bea5, -0.1px -0.1px 2px #d4bea5;
           box-shadow: 0.1px 0.1px 2px #d4bea5, -0.1px -0.1px 2px #d4bea5;
@@ -933,6 +975,10 @@ a:hover {
   height: 11.25rem;
 }
 
+.menu .social-mobile {
+  margin-top: 4.375rem;
+}
+
 @-webkit-keyframes grow {
   0% {
     -webkit-transform: scaleX(0);
@@ -944,6 +990,93 @@ a:hover {
   0% {
     -webkit-transform: scaleX(0);
             transform: scaleX(0);
+  }
+}
+
+@media (max-width: 979px) {
+  .menu .coffee-menu {
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 849px) {
+  .menu .coffee-menu {
+    gap: 2.5rem;
+  }
+  .menu .menu-item {
+    width: clamp(18.75rem, 23.75rem, 28.125rem);
+  }
+  .menu .testimonials {
+    padding: 0 7.5rem;
+  }
+  .menu .testimonials .testimonial-right .customer-image {
+    width: 9.375rem;
+    height: 9.375rem;
+  }
+}
+
+@media (max-width: 749px) {
+  .menu .testimonials {
+    padding: 0 5rem;
+  }
+  .menu .testimonials h3 {
+    margin-bottom: 3.75rem;
+  }
+  .menu .testimonials .testimonial-container {
+    padding-top: 2.5rem;
+  }
+  .menu .testimonials .testimonial-left {
+    margin-right: 0rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .menu .testimonials .testimonial-right .customer-image {
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 6.25rem;
+    height: 6.25rem;
+  }
+}
+
+@media (max-width: 599px) {
+  .menu .coffee-menu {
+    padding: 0 1.875rem;
+  }
+  .menu .coffee-mugs .promo-text {
+    padding: 0 1.875rem;
+    text-align: center;
+    font-size: 0.875rem;
+  }
+  .menu .promo-images {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .menu .testimonials {
+    padding: 0 1.875rem;
+  }
+  .menu .testimonials .testimonial-container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+  .menu .testimonials .testimonial-container .bg-img-2 {
+    left: 12.5rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */
