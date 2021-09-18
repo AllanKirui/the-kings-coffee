@@ -1,0 +1,20 @@
+.gallery {
+  font-family: "Josefin Sans", sans-serif;
+
+  &-section {
+    padding: 0 toRem(100);
+  }
+
+  &-item {
+    position: relative;
+    list-style-type: none;
+
+    a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      text-decoration: none;
+      color: red;
+    }
+  }
+}
