@@ -1079,4 +1079,25 @@ a:hover {
     left: 12.5rem;
   }
 }
+
+.gallery {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.gallery-section {
+  padding: 0 6.25rem;
+}
+
+.gallery-item {
+  position: relative;
+  list-style-type: none;
+}
+
+.gallery-item a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-decoration: none;
+  color: red;
+}
 /*# sourceMappingURL=styles.css.map */
