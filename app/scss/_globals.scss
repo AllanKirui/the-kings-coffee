@@ -1,452 +1,456 @@
 html {
-   font-size: 100%;
-   box-sizing: border-box;
+  font-size: 100%;
+  box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
-   box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 body {
-   margin: 0;
-   padding: 0;
-   font-family: "Josefin Sans", sans-serif;
-   font-family: "Poppins", sans-serif;
-   background-color: $antique-white;
+  margin: 0;
+  padding: 0;
+  font-family: "Josefin Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+  background-color: $antique-white;
 }
 
 h1,
 h2,
 h3,
 p {
-   margin: 0;
+  margin: 0;
 }
 
 .container {
-   position: relative;
-   margin: 0 auto;
-   max-width: toRem(1400);
-   height: 100vh;
+  position: relative;
+  margin: 0 auto;
+  max-width: toRem(1400);
+  height: 100vh;
 
-   // Navigation styles
-   .header {
-      position: relative;
-      width: 100%;
-      height: toRem(70);
-      padding: 0 toRem(120);
-      background-color: $elgengrau;
-      z-index: 3;
-   }
+  // Navigation styles
+  .header {
+    position: relative;
+    width: 100%;
+    height: toRem(70);
+    padding: 0 toRem(120);
+    background-color: $elgengrau;
+    z-index: 3;
+  }
 
-   .nav {
-      position: relative;
+  .nav {
+    position: relative;
+
+    a {
+      color: $antique-white;
+    }
+
+    &-logo {
+      margin-top: toRem(25);
+      font-weight: 100;
+      font-size: $font-lg;
+      transition: color 300ms ease-in-out;
+
+      &:hover {
+        color: $persian-orange;
+      }
+    }
+
+    &-links {
+      margin-top: toRem(28);
 
       a {
-         color: $antique-white;
+        position: relative;
+        text-transform: uppercase;
+        font-size: $font-sm;
+        font-weight: 300;
+        transition: color 300ms ease-in-out;
+        padding: toRem(10) toRem(20);
+
+        &:not(:last-child) {
+          margin-right: toRem(24);
+        }
+
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          height: 2px;
+          left: 0;
+          right: 0;
+          bottom: -13px;
+          background: $persian-orange;
+          opacity: 0;
+          transition: opacity 300ms ease-in-out;
+        }
+
+        &:hover {
+          color: $persian-orange;
+
+          &::before {
+            opacity: 1;
+          }
+        }
       }
+    }
 
-      &-logo {
-         margin-top: toRem(25);
-         font-weight: 100;
-         font-size: $font-lg;
-         transition: color 300ms ease-in-out;
+    &-burger {
+      margin-top: toRem(20);
+      width: toRem(45);
+      height: toRem(30);
+      background: url("../../img/kettle_closed.svg");
+      background-repeat: no-repeat;
+      background-position: right;
+      z-index: 4;
+      transition: 0.2s ease-in;
+      cursor: pointer;
 
-         &:hover {
-            color: $persian-orange;
-         }
+      &.active {
+        background: url("../../img/kettle_opened.svg");
+        background-repeat: no-repeat;
+        background-position: center;
       }
+    }
+  }
 
-      &-links {
-         margin-top: toRem(28);
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    z-index: 3;
 
-         a {
-            position: relative;
-            text-transform: uppercase;
-            font-size: $font-sm;
-            font-weight: 300;
-            transition: color 300ms ease-in-out;
-            padding: toRem(10) toRem(20);
+    & > div {
+      background: $persian-orange;
+      width: 90vw;
+      height: 90vw;
+      max-width: toRem(1440);
+      border-radius: 50%;
+      flex: none;
+      transform: scale(0);
+      transition: all 0.3s ease;
+    }
 
-            &:not(:last-child) {
-               margin-right: toRem(24);
-            }
+    & > div > div {
+      text-align: center;
+      max-width: 90vw;
+      max-height: 100vh;
+      opacity: 0;
+      z-index: 5;
+    }
 
-            &::before {
-               content: "";
-               display: block;
-               position: absolute;
-               height: 2px;
-               left: 0;
-               right: 0;
-               bottom: -13px;
-               background: $persian-orange;
-               opacity: 0;
-               transition: opacity 300ms ease-in-out;
-            }
-
-            &:hover {
-               color: $persian-orange;
-
-               &::before {
-                  opacity: 1;
-               }
-            }
-         }
-      }
-
-      &-burger {
-         margin-top: toRem(20);
-         width: toRem(45);
-         height: toRem(30);
-         background: url("../../img/kettle_closed.svg");
-         background-repeat: no-repeat;
-         background-position: right;
-         z-index: 4;
-         transition: 0.2s ease-in;
-         cursor: pointer;
-
-         &.active {
-            background: url("../../img/kettle_opened.svg");
-            background-repeat: no-repeat;
-            background-position: center;
-         }
-      }
-   }
-
-   .mobile-menu {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      visibility: hidden;
-      overflow: hidden;
-      z-index: 3;
-
-      & > div {
-         background: $persian-orange;
-         width: 90vw;
-         height: 90vw;
-         max-width: toRem(1440);
-         border-radius: 50%;
-         flex: none;
-         transform: scale(0);
-         transition: all 0.3s ease;
-      }
-
-      & > div > div {
-         text-align: center;
-         max-width: 90vw;
-         max-height: 100vh;
-         opacity: 0;
-         z-index: 5;
-      }
-
-      a {
-         text-transform: uppercase;
-         color: $elgengrau;
-         font-size: $font-nm;
-         transition: all 200ms ease-in-out;
-         position: relative;
-
-         &:not(:last-child) {
-            margin-bottom: toRem(44);
-         }
-
-         &:hover {
-            transform: scale(1.1);
-         }
-      }
-   }
-
-   // Social link styles for large devices
-   .social {
-      position: fixed;
-      top: toRem(120);
-      transform: translateX(toRem(70));
-      z-index: 2;
-
-      &__top-bar,
-      &__bottom-bar {
-         width: 2px;
-         height: toRem(120);
-         background-color: $elgengrau;
-      }
-
-      &__links {
-         margin: toRem(18) 0;
-
-         a {
-            transition: 300ms ease-in-out;
-
-            &:not(:last-child) {
-               margin-bottom: toRem(6);
-            }
-
-            &::before {
-               content: "";
-               position: absolute;
-               width: toRem(30);
-               height: toRem(30);
-               border-radius: 50%;
-               transition: box-shadow 300ms ease-in-out;
-
-               z-index: -1;
-            }
-
-            &:hover {
-               transform: translateX(10px);
-
-               &::before {
-                  box-shadow: 2px 2px 7px $elgengrau, -2px -2px 7px $elgengrau;
-               }
-            }
-         }
-      }
-   }
-
-   // Social link styles for mobile devices
-   .social-mobile {
-      position: relative;
-      left: 50%;
-      bottom: 0;
-      transform: translateX(-50%);
-      z-index: 2;
-      margin-top: toRem(192);
-      padding-bottom: toRem(20);
-
-      &__left-bar,
-      &__right-bar {
-         width: toRem(60);
-         height: 2px;
-         background-color: $elgengrau;
-      }
-
-      &__left-bar {
-         margin-right: toRem(12);
-      }
-
-      &__links {
-         a {
-            margin-right: toRem(12);
-            transition: 300ms ease-in-out;
-
-            &::before {
-               content: "";
-               position: absolute;
-               width: toRem(30);
-               height: toRem(30);
-               border-radius: 50%;
-               transition: box-shadow 300ms ease-in-out;
-
-               z-index: -1;
-            }
-
-            &:hover {
-               transform: translateY(-10px);
-
-               &::before {
-                  box-shadow: 2px 2px 7px $elgengrau, -2px -2px 7px $elgengrau;
-               }
-            }
-         }
-      }
-   }
-
-   // Page intro styles for inner pages
-   .intro {
-      padding: 0 toRem(160);
-   }
-
-   .page-title {
-      position: relative;
-      top: toRem(-21);
-      z-index: 1;
-
-      & > span {
-         color: $elgengrau;
-         font-size: $font-xxxl;
-         font-weight: bold;
-         text-transform: uppercase;
-         line-height: toRem(60);
-      }
-   }
-
-   .page-quote {
-      margin-top: toRem(55);
-      font-size: $font-xl;
+    a {
       text-transform: uppercase;
-   }
+      color: $elgengrau;
+      font-size: $font-nm;
+      transition: all 200ms ease-in-out;
+      position: relative;
 
-   .coffee-bean-logo {
-      img {
-         margin: 0 auto;
-         max-width: toRem(351);
-         // height: toRem(117);
+      &:not(:last-child) {
+        margin-bottom: toRem(44);
       }
 
-      p {
-         margin-top: toRem(5);
-         font-family: "Poppins", sans-serif;
-         font-size: $font-sm;
-         text-align: center;
+      &:hover {
+        transform: scale(1.1);
       }
-   }
+    }
+  }
+
+  // Social link styles for large devices
+  .social {
+    position: fixed;
+    top: toRem(120);
+    transform: translateX(toRem(70));
+    z-index: 2;
+
+    &__top-bar,
+    &__bottom-bar {
+      width: 2px;
+      height: toRem(120);
+      background-color: $elgengrau;
+    }
+
+    &__links {
+      margin: toRem(18) 0;
+
+      a {
+        transition: 300ms ease-in-out;
+
+        &:not(:last-child) {
+          margin-bottom: toRem(6);
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: toRem(30);
+          height: toRem(30);
+          border-radius: 50%;
+          transition: box-shadow 300ms ease-in-out;
+
+          z-index: -1;
+        }
+
+        &:hover {
+          transform: translateX(10px);
+
+          &::before {
+            box-shadow: 2px 2px 7px $elgengrau, -2px -2px 7px $elgengrau;
+          }
+        }
+      }
+    }
+  }
+
+  // Social link styles for mobile devices
+  .social-mobile {
+    position: relative;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    z-index: 2;
+    margin-top: toRem(192);
+    padding-bottom: toRem(20);
+
+    &__left-bar,
+    &__right-bar {
+      width: toRem(60);
+      height: 2px;
+      background-color: $elgengrau;
+    }
+
+    &__left-bar {
+      margin-right: toRem(12);
+    }
+
+    &__links {
+      a {
+        margin-right: toRem(12);
+        transition: 300ms ease-in-out;
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: toRem(30);
+          height: toRem(30);
+          border-radius: 50%;
+          transition: box-shadow 300ms ease-in-out;
+
+          z-index: -1;
+        }
+
+        &:hover {
+          transform: translateY(-10px);
+
+          &::before {
+            box-shadow: 2px 2px 7px $elgengrau, -2px -2px 7px $elgengrau;
+          }
+        }
+      }
+    }
+  }
+
+  // Page intro styles for inner pages
+  .intro {
+    padding: 0 toRem(160);
+  }
+
+  .page-title {
+    position: relative;
+    top: toRem(-21);
+    z-index: 1;
+
+    & > span {
+      color: $elgengrau;
+      font-size: $font-xxl;
+      font-weight: bold;
+      text-transform: uppercase;
+      line-height: toRem(60);
+    }
+  }
+
+  .page-quote {
+    margin-top: toRem(55);
+    font-size: $font-xl;
+    text-transform: uppercase;
+
+    span {
+      display: inline-block;
+    }
+  }
+
+  .coffee-bean-logo {
+    img {
+      margin: 0 auto;
+      max-width: toRem(351);
+      // height: toRem(117);
+    }
+
+    p {
+      margin-top: toRem(5);
+      font-family: "Poppins", sans-serif;
+      font-size: $font-sm;
+      text-align: center;
+    }
+  }
 }
 
 // Reset links
 a,
 a:visited,
 a:hover {
-   text-decoration: none;
+  text-decoration: none;
 }
 
 // Flex Properties
 .flex {
-   display: flex;
+  display: flex;
 
-   &-jc-sb {
-      justify-content: space-between;
-   }
+  &-jc-sb {
+    justify-content: space-between;
+  }
 
-   &-jc-c {
-      justify-content: center;
-   }
+  &-jc-c {
+    justify-content: center;
+  }
 
-   &-ai-c {
-      align-items: center;
-   }
+  &-ai-c {
+    align-items: center;
+  }
 
-   &-fd-c {
-      flex-direction: column;
-   }
+  &-fd-c {
+    flex-direction: column;
+  }
 
-   &-fw-w {
-      flex-wrap: wrap;
-   }
+  &-fw-w {
+    flex-wrap: wrap;
+  }
 }
 
 // Helper classes
 .no-scroll {
-   overflow: hidden;
+  overflow: hidden;
 }
 
 .text-bold {
-   font-weight: 700;
+  font-weight: 700;
 }
 
 .text-italic {
-   font-style: italic;
+  font-style: italic;
 }
 
 .text-with-stroke {
-   color: $antique-white !important;
-   -webkit-text-stroke: 1.5px $elgengrau;
+  color: $antique-white !important;
+  -webkit-text-stroke: 1.5px $elgengrau;
 }
 
 // Media queries
 @include breakpoint-down(1099px) {
-   .container {
-      .intro {
-         padding: 0 toRem(100);
-      }
-   }
+  .container {
+    .intro {
+      padding: 0 toRem(100);
+    }
+  }
 }
 
 @include breakpoint-down(979px) {
-   .container {
-      .nav-links {
-         display: none;
-      }
+  .container {
+    .nav-links {
+      display: none;
+    }
 
-      .intro {
-         .page-title {
-            top: toRem(-20);
+    .intro {
+      .page-title {
+        top: toRem(-20);
 
-            & > span {
-               font-size: toRem(60);
-               line-height: toRem(55);
-            }
-         }
-         .page-quote {
-            font-size: toRem(32);
-         }
+        & > span {
+          font-size: toRem(60);
+          line-height: toRem(55);
+        }
       }
-   }
+      .page-quote {
+        font-size: toRem(32);
+      }
+    }
+  }
 }
 
 @include breakpoint-up(980px) {
-   .nav-burger {
-      display: none;
-   }
+  .nav-burger {
+    display: none;
+  }
 }
 
 @include breakpoint-down(869px) {
-   .container {
-      .header {
-         padding: 0 toRem(80);
-      }
-   }
+  .container {
+    .header {
+      padding: 0 toRem(80);
+    }
+  }
 }
 
 @include breakpoint-down(749px) {
-   .social {
-      display: none;
-   }
+  .social {
+    display: none;
+  }
 
-   .container {
-      .intro-text {
-         flex-wrap: wrap;
-         justify-content: center;
-         align-items: center;
-      }
+  .container {
+    .intro-text {
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
 
-      .page-title {
-         margin: 0;
-         padding: 0;
-      }
+    .page-title {
+      margin: 0;
+      padding: 0;
+    }
 
-      .page-quote {
-         margin: 0 0 toRem(28);
-         text-align: center;
-      }
-   }
+    .page-quote {
+      margin: 0 0 toRem(28);
+      text-align: center;
+    }
+  }
 }
 
 @include breakpoint-up(750px) {
-   .social-mobile {
-      display: none;
-   }
+  .social-mobile {
+    display: none;
+  }
 }
 
 @include breakpoint-down(599px) {
-   .container {
-      .header {
-         padding: 0 toRem(30);
-      }
+  .container {
+    .header {
+      padding: 0 toRem(30);
+    }
 
-      .nav-logo {
-         font-size: toRem(24);
-      }
+    .nav-logo {
+      font-size: toRem(24);
+    }
 
-      .mobile-menu {
-         & > div {
-            width: 140vw;
-            height: 140vw;
-         }
+    .mobile-menu {
+      & > div {
+        width: 140vw;
+        height: 140vw;
       }
+    }
 
-      .intro {
-         padding: 0 toRem(30);
+    .intro {
+      padding: 0 toRem(30);
 
-         .coffee-bean-logo {
-            position: relative;
-            img {
-               width: 80vw;
-            }
-         }
+      .coffee-bean-logo {
+        position: relative;
+        img {
+          width: 80vw;
+        }
       }
-   }
+    }
+  }
 }
