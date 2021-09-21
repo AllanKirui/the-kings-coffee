@@ -301,6 +301,10 @@ p {
   display: inline-block;
 }
 
+.container .page-quote span.text-italic {
+  font-weight: 300;
+}
+
 .container .coffee-bean-logo img {
   margin: 0 auto;
   max-width: 21.9375rem;
@@ -1130,6 +1134,8 @@ a:hover {
           transform: scale(0);
   -webkit-transition: all 400ms ease-in-out;
   transition: all 400ms ease-in-out;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
   -webkit-transform-origin: top right;
           transform-origin: top right;
   visibility: hidden;
@@ -1157,8 +1163,8 @@ a:hover {
           transform: translate(-50%, -50%);
   text-decoration: none;
   color: #fbf0da;
-  padding: 10px 30px;
-  font-weight: 300;
+  font-family: "Poppins", sans-serif;
+  padding: 5px 25px;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   text-align: center;
@@ -1166,8 +1172,8 @@ a:hover {
   border: 1.5px solid #fbf0da;
   z-index: 3;
   visibility: hidden;
-  -webkit-transition: visibility 300ms ease-in;
-  transition: visibility 300ms ease-in;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 
 .gallery-item:hover a {
