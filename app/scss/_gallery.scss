@@ -39,6 +39,7 @@
       border-radius: 50rem 0 50rem 50rem;
       transform: scale(0);
       transition: all 400ms ease-in-out;
+      transition-delay: 0.2s;
       transform-origin: top right;
       visibility: hidden;
       // z-index: 2;
@@ -64,8 +65,9 @@
       transform: translate(-50%, -50%);
       text-decoration: none;
       color: $antique-white;
-      padding: 10px 30px;
-      font-weight: 300;
+      font-family: "Poppins", sans-serif;
+      padding: 5px 25px;
+      // font-weight: 300;
       text-transform: uppercase;
       letter-spacing: 1.5px;
       text-align: center;
@@ -73,7 +75,7 @@
       border: 1.5px solid $antique-white;
       z-index: 3;
       visibility: hidden;
-      transition: visibility 300ms ease-in;
+      transition: all 300ms ease-in-out;
     }
 
     &:hover a {
