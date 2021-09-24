@@ -1396,6 +1396,7 @@ a:hover {
 
 .find-us .contact {
   font-family: "Poppins", sans-serif;
+  background-color: tomato;
 }
 
 .find-us .contact .contact-info {
@@ -1420,5 +1421,91 @@ a:hover {
 
 .find-us .contact .contact-info div {
   width: 9.375rem;
+}
+
+.find-us .contact .contact-form {
+  background-color: #f7e7ce;
+  width: 31.25rem;
+}
+
+.find-us .contact .contact-form form {
+  padding: 2.5rem 0;
+}
+
+.find-us .contact .contact-form .form-control {
+  max-width: 22.5rem;
+  margin: 0 auto 0.9375rem;
+  position: relative;
+}
+
+.find-us .contact .contact-form .form-control input,
+.find-us .contact .contact-form .form-control textarea {
+  width: 100%;
+  background: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #2f2e41;
+  display: block;
+  padding: 0.9375rem 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  color: #2f2e41;
+}
+
+.find-us .contact .contact-form .form-control textarea {
+  max-width: 100%;
+}
+
+.find-us .contact .contact-form .form-control input:focus,
+.find-us .contact .contact-form .form-control input:valid,
+.find-us .contact .contact-form .form-control textarea:focus {
+  outline: none;
+  border-bottom-color: #9f703a;
+}
+
+.find-us .contact .contact-form .form-control label {
+  position: absolute;
+  top: 0.875rem;
+  left: 0;
+  font-size: 1rem;
+  pointer-events: none;
+}
+
+.find-us .contact .contact-form .form-control label span {
+  display: inline-block;
+  min-width: 0.3125rem;
+  font-size: 1rem;
+  -webkit-transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.find-us .contact .contact-form .form-control input:focus + label span,
+.find-us .contact .contact-form .form-control input:valid + label span {
+  -webkit-transform: translateY(-1.875rem);
+          transform: translateY(-1.875rem);
+}
+
+.find-us .contact .contact-form .btn {
+  display: inline-block;
+  width: 22.5rem;
+  padding: 0.9375rem;
+  margin-left: calc(50% - 180px);
+  margin-top: 0.9375rem;
+  border-radius: 3.125rem;
+  border: none;
+  font-family: inherit;
+  font-size: 1rem;
+  background-color: #2f2e41;
+  color: #fbf0da;
+  cursor: pointer;
+}
+
+.find-us .contact .contact-form .btn:active {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.find-us .contact .contact-form .btn:focus {
+  outline: none;
 }
 /*# sourceMappingURL=styles.css.map */
