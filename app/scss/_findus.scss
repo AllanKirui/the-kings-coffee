@@ -1,0 +1,52 @@
+.find-us {
+  font-family: "Josefin Sans", sans-serif;
+
+  .contact-container {
+    padding: 0 toRem(135) toRem(60);
+    margin-top: toRem(50);
+  }
+
+  .bg-img {
+    background-image: url(../../img/contact_us.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: toRem(450);
+    height: toRem(237);
+    margin: 0 auto;
+    margin-bottom: toRem(50);
+  }
+
+  h3 {
+    text-align: center;
+    margin-bottom: toRem(50);
+  }
+
+  .contact {
+    font-family: "Poppins", sans-serif;
+
+    .contact-info {
+      // max-width: toRem(530);
+      max-width: toRem(500);
+      background-color: $champagne;
+      padding: toRem(60);
+      gap: toRem(55);
+
+      img {
+        margin-bottom: toRem(10);
+      }
+
+      h3 {
+        margin-bottom: toRem(5);
+        font-size: $font-nm;
+      }
+
+      p {
+        font-size: $font-sm;
+      }
+
+      div {
+        width: toRem(150);
+      }
+    }
+  }
+}
