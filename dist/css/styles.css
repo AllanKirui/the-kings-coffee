@@ -1369,4 +1369,56 @@ a:hover {
             align-items: center;
   }
 }
+
+.find-us {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.find-us .contact-container {
+  padding: 0 8.4375rem 3.75rem;
+  margin-top: 3.125rem;
+}
+
+.find-us .bg-img {
+  background-image: url(../../img/contact_us.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 28.125rem;
+  height: 14.8125rem;
+  margin: 0 auto;
+  margin-bottom: 3.125rem;
+}
+
+.find-us h3 {
+  text-align: center;
+  margin-bottom: 3.125rem;
+}
+
+.find-us .contact {
+  font-family: "Poppins", sans-serif;
+}
+
+.find-us .contact .contact-info {
+  max-width: 31.25rem;
+  background-color: #f7e7ce;
+  padding: 3.75rem;
+  gap: 3.4375rem;
+}
+
+.find-us .contact .contact-info img {
+  margin-bottom: 0.625rem;
+}
+
+.find-us .contact .contact-info h3 {
+  margin-bottom: 0.3125rem;
+  font-size: 1rem;
+}
+
+.find-us .contact .contact-info p {
+  font-size: 0.875rem;
+}
+
+.find-us .contact .contact-info div {
+  width: 9.375rem;
+}
 /*# sourceMappingURL=styles.css.map */
