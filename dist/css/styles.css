@@ -1440,13 +1440,13 @@ a:hover {
 
 .find-us .contact .contact-form .form-control input,
 .find-us .contact .contact-form .form-control textarea {
+  display: block;
   width: 100%;
   background: transparent;
   outline: none;
   border: none;
   border-bottom: 2px solid #2f2e41;
-  display: block;
-  padding: 0.9375rem 0;
+  padding: 0.9375rem 0 0.625rem;
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
   color: #2f2e41;
@@ -1457,7 +1457,6 @@ a:hover {
 }
 
 .find-us .contact .contact-form .form-control input:focus,
-.find-us .contact .contact-form .form-control input:valid,
 .find-us .contact .contact-form .form-control textarea:focus {
   outline: none;
   border-bottom-color: #9f703a;
@@ -1480,9 +1479,13 @@ a:hover {
 }
 
 .find-us .contact .contact-form .form-control input:focus + label span,
-.find-us .contact .contact-form .form-control input:valid + label span {
-  -webkit-transform: translateY(-1.875rem);
-          transform: translateY(-1.875rem);
+.find-us .contact .contact-form .form-control input:valid + label span,
+.find-us .contact .contact-form .form-control textarea:focus + label span,
+.find-us .contact .contact-form .form-control textarea:valid + label span {
+  -webkit-transform: translateY(-25px);
+          transform: translateY(-25px);
+  color: #5a4020;
+  font-size: 0.875rem;
 }
 
 .find-us .contact .contact-form .btn {
@@ -1498,6 +1501,10 @@ a:hover {
   background-color: #2f2e41;
   color: #fbf0da;
   cursor: pointer;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
 }
 
 .find-us .contact .contact-form .btn:active {
