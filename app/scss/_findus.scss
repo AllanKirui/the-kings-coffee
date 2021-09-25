@@ -66,13 +66,13 @@
 
         input,
         textarea {
+          display: block;
           width: 100%;
           background: transparent;
           outline: none;
           border: none;
           border-bottom: 2px solid $gun-metal;
-          display: block;
-          padding: toRem(15) 0;
+          padding: toRem(15) 0 toRem(10);
           font-family: "Poppins", sans-serif;
           font-size: $font-nm;
           color: $gun-metal;
@@ -82,9 +82,8 @@
           max-width: 100%;
         }
 
-        & input:focus,
-        & input:valid,
-        & textarea:focus {
+        input:focus,
+        textarea:focus {
           outline: none;
           border-bottom-color: $ochre-brown;
         }
@@ -100,13 +99,19 @@
             display: inline-block;
             min-width: toRem(5);
             font-size: $font-nm;
+            // font-size: $font-xxl;
             transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
           }
         }
 
         input:focus + label span,
-        input:valid + label span {
-          transform: translateY(toRem(-30));
+        input:valid + label span,
+        textarea:focus + label span,
+        textarea:valid + label span {
+          transform: translateY(-25px);
+          color: $beige-grey;
+          font-size: $font-sm;
+          // color: $persian-orange;
         }
       }
 
@@ -126,6 +131,7 @@
         background-color: $gun-metal;
         color: $antique-white;
         cursor: pointer;
+        transition: transform 0.2s ease-in-out;
 
         &:active {
           transform: scale(0.95);
