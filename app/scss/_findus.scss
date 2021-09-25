@@ -23,7 +23,7 @@
 
   .contact {
     font-family: "Poppins", sans-serif;
-    background-color: tomato;
+    gap: toRem(20);
 
     .contact-info {
       // max-width: toRem(530);
@@ -31,6 +31,17 @@
       background-color: $champagne;
       padding: toRem(60);
       gap: toRem(55);
+      border-radius: toRem(10);
+      // box-shadow: toRem(-20) toRem(20) toRem(20) #aaa;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+        rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+      transition: all 0.4s;
+
+      &:hover {
+        transform: translateY(toRem(-15));
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+          rgba(0, 0, 0, 0.22) 0px 15px 12px;
+      }
 
       img {
         margin-bottom: toRem(10);
@@ -53,6 +64,17 @@
     .contact-form {
       background-color: $champagne;
       width: toRem(500);
+      border-radius: toRem(10);
+      // box-shadow: toRem(20) toRem(20) toRem(20) #aaa;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+        rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+      transition: all 0.4s;
+
+      &:hover {
+        transform: translateY(toRem(-15));
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+          rgba(0, 0, 0, 0.22) 0px 15px 12px;
+      }
 
       form {
         padding: toRem(40) 0;
@@ -62,7 +84,6 @@
         max-width: toRem(360);
         margin: 0 auto toRem(15);
         position: relative;
-        // background-color: tomato;
 
         input,
         textarea {
@@ -80,6 +101,7 @@
 
         textarea {
           max-width: 100%;
+          max-height: toRem(150);
         }
 
         input:focus,
