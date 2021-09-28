@@ -7,13 +7,17 @@
   }
 
   .bg-img {
-    background-image: url(../../img/contact_us.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    max-width: toRem(450);
-    height: toRem(237);
-    margin: 0 auto;
+    // background-image: url(../../img/contact_us.svg);
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // max-width: toRem(450);
+    // height: toRem(237);
+    margin-left: auto;
     margin-bottom: toRem(50);
+
+    img {
+      max-width: 100%;
+    }
   }
 
   h3 {
