@@ -1386,13 +1386,12 @@ a:hover {
 }
 
 .find-us .bg-img {
-  background-image: url(../../img/contact_us.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  max-width: 28.125rem;
-  height: 14.8125rem;
-  margin: 0 auto;
+  margin-left: auto;
   margin-bottom: 3.125rem;
+}
+
+.find-us .bg-img img {
+  max-width: 100%;
 }
 
 .find-us h3 {
@@ -1402,7 +1401,7 @@ a:hover {
 
 .find-us .contact {
   font-family: "Poppins", sans-serif;
-  gap: 1.25rem;
+  gap: 1.5625rem;
   margin-bottom: 5.625rem;
 }
 
@@ -1444,12 +1443,13 @@ a:hover {
 
 .find-us .contact .contact-form {
   background-color: #f7e7ce;
-  width: 31.25rem;
   border-radius: 0.625rem;
   -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
           box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
+  width: 100%;
+  max-width: 31.25rem;
 }
 
 .find-us .contact .contact-form:hover {
@@ -1460,11 +1460,12 @@ a:hover {
 }
 
 .find-us .contact .contact-form form {
-  padding: 2.5rem 0;
+  width: 100%;
+  padding: 2.5rem 2.5rem;
 }
 
 .find-us .contact .contact-form .form-control {
-  max-width: 22.5rem;
+  width: 100%;
   margin: 0 auto 0.9375rem;
   position: relative;
 }
@@ -1521,10 +1522,8 @@ a:hover {
 }
 
 .find-us .contact .contact-form .btn {
-  display: inline-block;
-  width: 22.5rem;
+  width: 100%;
   padding: 0.9375rem;
-  margin-left: calc(50% - 180px);
   margin-top: 0.9375rem;
   border-radius: 3.125rem;
   border: none;
@@ -1537,6 +1536,8 @@ a:hover {
   transition: -webkit-transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  position: relative;
+  overflow: hidden;
 }
 
 .find-us .contact .contact-form .btn:active {
@@ -1548,6 +1549,25 @@ a:hover {
   outline: none;
 }
 
+.find-us .contact .contact-form .btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(#9f703a), to(transparent));
+  background: linear-gradient(to right, transparent, #9f703a, transparent);
+  -webkit-transform: skewX(-30deg);
+          transform: skewX(-30deg);
+  -webkit-transition: left 0.5s;
+  transition: left 0.5s;
+}
+
+.find-us .contact .contact-form .btn:hover::before {
+  left: 100%;
+}
+
 .find-us .attribution img {
   width: 100%;
 }
@@ -1557,39 +1577,129 @@ a:hover {
   text-align: center;
 }
 
-.find-us .attribution .bg-img-2,
-.find-us .attribution .bg-img-3 {
-  margin: 0 auto;
-}
-
-.find-us .attribution .bg-img-2 {
+.find-us .attribution a {
+  color: #5a4020;
+  cursor: pointer;
   position: relative;
 }
 
-.find-us .attribution .bg-img-2 p {
+.find-us .attribution a::before, .find-us .attribution a::after {
   position: absolute;
-  top: 65%;
-  left: 45%;
-  width: 35%;
+  width: 100%;
+  height: 1px;
+  background: #9f703a;
+  top: 100%;
+  left: 0;
+  pointer-events: none;
+}
+
+.find-us .attribution a::before {
+  content: "";
+}
+
+.find-us .attribution .link::before {
+  -webkit-transform-origin: 100% 50%;
+          transform-origin: 100% 50%;
+  -webkit-transform: scale3d(0, 1, 1);
+          transform: scale3d(0, 1, 1);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+  transition: -webkit-transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+  transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+  transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1), -webkit-transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+}
+
+.find-us .attribution .link:hover::before {
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+  -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
+  -webkit-transition-timing-function: cubic-bezier(0.4, 1, 0.8, 1);
+          transition-timing-function: cubic-bezier(0.4, 1, 0.8, 1);
+}
+
+.find-us .attribution .link::after {
+  content: "";
+  top: calc(100% + 4px);
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+  -webkit-transform: scale3d(0, 1, 1);
+          transform: scale3d(0, 1, 1);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+  transition: -webkit-transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+  transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+  transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1), -webkit-transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+}
+
+.find-us .attribution .link:hover::after {
+  -webkit-transform-origin: 100% 50%;
+          transform-origin: 100% 50%;
+  -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
+  -webkit-transition-timing-function: cubic-bezier(0.4, 1, 0.8, 1);
+          transition-timing-function: cubic-bezier(0.4, 1, 0.8, 1);
+}
+
+.find-us .attribution .desktop-img,
+.find-us .attribution .mobile-img {
+  margin: 0 auto;
+}
+
+.find-us .attribution .desktop-img {
+  position: relative;
+}
+
+.find-us .attribution .desktop-img p {
+  position: absolute;
+  top: 64%;
+  left: 44%;
+  max-width: 35%;
   line-height: 1.3;
 }
 
-.find-us .attribution .bg-img-3 img {
+.find-us .attribution .mobile-img img {
   margin-bottom: 0.625rem;
+}
+
+.find-us .social-mobile {
+  margin-top: 0.625rem;
 }
 
 @media (max-width: 849px) {
   .find-us .hide-for-small {
     display: none;
   }
+  .find-us .intro-text .page-title {
+    min-width: -webkit-fit-content;
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+  }
   .find-us .contact-container {
     padding: 0 1.875rem 3.75rem;
+  }
+  .find-us .contact-container .contact-form form {
+    padding: 2.5rem 1.25rem;
   }
 }
 
 @media (min-width: 850px) {
   .find-us .hide-for-large {
     display: none;
+  }
+}
+
+@media (max-width: 779px) {
+  .find-us .intro-text .page-quote {
+    text-align: right;
+  }
+  .find-us .contact {
+    font-family: "Poppins", sans-serif;
+    gap: 3.125rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .find-us .intro-text .page-quote {
+    text-align: center;
   }
 }
 /*# sourceMappingURL=styles.css.map */
