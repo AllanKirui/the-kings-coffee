@@ -1,330 +1,330 @@
 .home {
-   font-family: "Josefin Sans", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
 
-   &__main {
+  &__main {
+    position: relative;
+    padding: 0 toRem(120);
+
+    &-text {
+      margin: toRem(190) 0 0 toRem(70);
+      width: 52%;
+
+      .heading {
+        height: toRem(170);
+        font-size: $font-xxxl;
+        font-weight: 400;
+        overflow: hidden;
+
+        div {
+          margin-bottom: 0px;
+          padding: 5px 0;
+          height: toRem(170);
+          box-sizing: border-box;
+
+          &:nth-child(4) {
+            margin-top: toRem(20);
+          }
+        }
+
+        &__slider-text1 {
+          animation: slidingText 10s linear infinite;
+        }
+      }
+
+      @include breakpoint-down(1279px) {
+        .heading {
+          font-size: $font-xxl;
+        }
+      }
+    }
+
+    &-clock-container {
+      margin: toRem(80) 0 0 toRem(80);
       position: relative;
-      padding: 0 toRem(120);
+      height: fit-content;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: -5px;
+        left: 1px;
+        width: 100%;
+        height: 100%;
+        box-shadow: rgb(38, 57, 77) 0 toRem(20) toRem(30) toRem(-10);
+        border-radius: 50%;
+        z-index: -2;
+      }
+
+      img {
+        width: toRem(302);
+        height: toRem(302);
+      }
+    }
+
+    &-clock {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: toRem(191.1);
+      height: toRem(191.1);
+      opacity: 0.9;
+
+      & .hand {
+        --rotation: 0;
+        position: absolute;
+        bottom: 50%;
+        left: 50%;
+        width: 3px;
+        background-color: #000;
+        border-top-left-radius: toRem(10);
+        border-top-right-radius: toRem(10);
+        transform-origin: bottom;
+        transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+        z-index: 5;
+      }
+
+      // Center dot
+      &::after {
+        content: "";
+        width: 8px;
+        height: 8px;
+        background-color: #fbf0da;
+        border: 2px solid #161719;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        z-index: 5;
+      }
+
+      // Second hand
+      & .hand.second {
+        position: absolute;
+        bottom: 1.9px;
+        width: 2px;
+        height: 20%;
+        background-color: #161719;
+        z-index: 1;
+      }
+
+      // Minute hand
+      & .hand.minute {
+        height: 40%;
+        background-color: #161719;
+      }
+
+      // Hour hand
+      & .hand.hour {
+        height: 35%;
+        background-color: #161719;
+      }
+
+      // Center dot for second hand
+      & .center {
+        position: absolute;
+        bottom: -1.7px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #fbf0da;
+        width: 7px;
+        height: 7px;
+        border: 2px solid #161719;
+        border-radius: 50%;
+        z-index: 2;
+      }
+    }
+
+    &-digital-clock {
+      text-transform: uppercase;
+      text-align: center;
+      color: $beige-grey;
+      font-size: $font-sm;
+      position: absolute;
+      bottom: -38%;
+      left: 50%;
+      transform: translateX(-50%);
+
+      .time {
+        font-size: $font-xxl;
+        color: $elgengrau;
+        margin-top: 5px;
+      }
+
+      .date .circle-bg {
+        background-color: $elgengrau;
+        padding-top: 1px;
+        color: $persian-orange;
+        width: toRem(22);
+        height: toRem(22);
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+  // Animation
+  @keyframes slidingText {
+    0% {
+      margin-top: toRem(-680);
+    }
+    5% {
+      margin-top: toRem(-510);
+    }
+    25% {
+      margin-top: toRem(-510);
+    }
+    30% {
+      margin-top: toRem(-340);
+    }
+    50% {
+      margin-top: toRem(-340);
+    }
+    55% {
+      margin-top: toRem(-170);
+    }
+    75% {
+      margin-top: toRem(-170);
+    }
+    80% {
+      margin-top: 0px;
+    }
+    100% {
+      margin-top: 0px;
+    }
+  }
+
+  // Media queries
+  @include breakpoint-down(1149px) {
+    &__main-text {
+      margin: toRem(210) 0 0 toRem(20);
+      width: 60%;
+      height: toRem(140);
+
+      .heading {
+        height: toRem(140);
+
+        div {
+          margin-top: 0;
+        }
+      }
+    }
+
+    &__main-clock-container {
+      margin: toRem(100) 0 0 toRem(30);
+
+      img {
+        width: toRem(270);
+        height: toRem(270);
+      }
+    }
+
+    &__main-digital-clock {
+      .time {
+        font-size: $font-xl;
+      }
+    }
+
+    &__main-clock {
+      & .hand.second {
+        bottom: 10px;
+        height: 16%;
+      }
+      // Center dot for second hand
+      & .center {
+        bottom: 6px;
+      }
+    }
+  }
+
+  @include breakpoint-down(1023px) {
+    &__main {
+      flex-direction: column;
 
       &-text {
-         margin: toRem(190) 0 0 toRem(70);
-         width: 52%;
-
-         .heading {
-            height: toRem(170);
-            font-size: $font-xxxl;
-            font-weight: 400;
-            overflow: hidden;
-
-            div {
-               margin-bottom: 0px;
-               padding: 5px 0;
-               height: toRem(170);
-               box-sizing: border-box;
-
-               &:nth-child(4) {
-                  margin-top: toRem(20);
-               }
-            }
-
-            &__slider-text1 {
-               animation: slidingText 10s linear infinite;
-            }
-         }
-
-         @include breakpoint-down(1279px) {
-            .heading {
-               font-size: $font-xxl;
-            }
-         }
+        margin: toRem(50) auto 0;
+        width: 100%;
+        text-align: center;
       }
 
       &-clock-container {
-         margin: toRem(80) 0 0 toRem(80);
-         position: relative;
-         height: fit-content;
-
-         &::before {
-            content: "";
-            position: absolute;
-            top: -5px;
-            left: 1px;
-            width: 100%;
-            height: 100%;
-            box-shadow: rgb(38, 57, 77) 0 toRem(20) toRem(30) toRem(-10);
-            border-radius: 50%;
-            z-index: -2;
-         }
-
-         img {
-            width: toRem(302);
-            height: toRem(302);
-         }
-      }
-
-      &-clock {
-         position: absolute;
-         top: 50%;
-         left: 50%;
-         transform: translate(-50%, -50%);
-         width: toRem(191.1);
-         height: toRem(191.1);
-         opacity: 0.9;
-
-         & .hand {
-            --rotation: 0;
-            position: absolute;
-            bottom: 50%;
-            left: 50%;
-            width: 3px;
-            background-color: #000;
-            border-top-left-radius: toRem(10);
-            border-top-right-radius: toRem(10);
-            transform-origin: bottom;
-            transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
-            z-index: 5;
-         }
-
-         // Center dot
-         &::after {
-            content: "";
-            width: 8px;
-            height: 8px;
-            background-color: #fbf0da;
-            border: 2px solid #161719;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            border-radius: 50%;
-            z-index: 5;
-         }
-
-         // Second hand
-         & .hand.second {
-            position: absolute;
-            bottom: 1.9px;
-            width: 2px;
-            height: 20%;
-            background-color: #161719;
-            z-index: 1;
-         }
-
-         // Minute hand
-         & .hand.minute {
-            height: 40%;
-            background-color: #161719;
-         }
-
-         // Hour hand
-         & .hand.hour {
-            height: 35%;
-            background-color: #161719;
-         }
-
-         // Center dot for second hand
-         & .center {
-            position: absolute;
-            bottom: -1.7px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: #fbf0da;
-            width: 7px;
-            height: 7px;
-            border: 2px solid #161719;
-            border-radius: 50%;
-            z-index: 2;
-         }
+        transform: translateX(40%);
+        width: toRem(270);
+        height: toRem(270);
+        margin-top: toRem(40);
       }
 
       &-digital-clock {
-         text-transform: uppercase;
-         text-align: center;
-         color: #9f703a;
-         font-size: $font-sm;
-         position: absolute;
-         bottom: -38%;
-         left: 50%;
-         transform: translateX(-50%);
+        position: absolute;
+        top: 35%;
+        bottom: 0;
+        transform: translateX(170%);
 
-         .time {
-            font-size: $font-xxl;
-            color: $elgengrau;
-            margin-top: 5px;
-         }
+        .time {
+          font-size: $font-xxl;
+        }
+      }
+    }
+  }
 
-         .date .circle-bg {
-            background-color: $elgengrau;
-            padding-top: 1px;
-            color: $persian-orange;
-            width: toRem(22);
-            height: toRem(22);
-            border-radius: 50%;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-         }
-      }
-   }
-   // Animation
-   @keyframes slidingText {
-      0% {
-         margin-top: toRem(-680);
-      }
-      5% {
-         margin-top: toRem(-510);
-      }
-      25% {
-         margin-top: toRem(-510);
-      }
-      30% {
-         margin-top: toRem(-340);
-      }
-      50% {
-         margin-top: toRem(-340);
-      }
-      55% {
-         margin-top: toRem(-170);
-      }
-      75% {
-         margin-top: toRem(-170);
-      }
-      80% {
-         margin-top: 0px;
-      }
-      100% {
-         margin-top: 0px;
-      }
-   }
+  @include breakpoint-down(869px) {
+    &__main {
+      padding: 0 toRem(80);
+    }
+  }
 
-   // Media queries
-   @include breakpoint-down(1149px) {
-      &__main-text {
-         margin: toRem(210) 0 0 toRem(20);
-         width: 60%;
-         height: toRem(140);
+  @include breakpoint-down(749px) {
+    &__main {
+      &-text {
+        margin: toRem(50) auto 0;
+        width: 100%;
+        text-align: center;
+      }
 
-         .heading {
-            height: toRem(140);
+      &-clock-container {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: toRem(270);
+        height: toRem(270);
+        margin-top: toRem(40);
+        margin-left: 0;
+      }
 
-            div {
-               margin-top: 0;
+      &-digital-clock {
+        position: relative;
+        top: toRem(30);
+        left: 50%;
+        transform: translateX(-50%);
+
+        .time {
+          font-size: $font-xl;
+        }
+      }
+    }
+  }
+
+  @include breakpoint-down(599px) {
+    &__main {
+      padding: 0 toRem(30);
+    }
+
+    &__main {
+      &-text {
+        height: toRem(100);
+        .heading {
+          font-size: $font-xl;
+          height: toRem(100);
+
+          & > div {
+            &:nth-child(4) {
+              margin-top: 0;
             }
-         }
+          }
+        }
       }
-
-      &__main-clock-container {
-         margin: toRem(100) 0 0 toRem(30);
-
-         img {
-            width: toRem(270);
-            height: toRem(270);
-         }
-      }
-
-      &__main-digital-clock {
-         .time {
-            font-size: $font-xl;
-         }
-      }
-
-      &__main-clock {
-         & .hand.second {
-            bottom: 10px;
-            height: 16%;
-         }
-         // Center dot for second hand
-         & .center {
-            bottom: 6px;
-         }
-      }
-   }
-
-   @include breakpoint-down(1023px) {
-      &__main {
-         flex-direction: column;
-
-         &-text {
-            margin: toRem(50) auto 0;
-            width: 100%;
-            text-align: center;
-         }
-
-         &-clock-container {
-            transform: translateX(40%);
-            width: toRem(270);
-            height: toRem(270);
-            margin-top: toRem(40);
-         }
-
-         &-digital-clock {
-            position: absolute;
-            top: 35%;
-            bottom: 0;
-            transform: translateX(170%);
-
-            .time {
-               font-size: $font-xxl;
-            }
-         }
-      }
-   }
-
-   @include breakpoint-down(869px) {
-      &__main {
-         padding: 0 toRem(80);
-      }
-   }
-
-   @include breakpoint-down(749px) {
-      &__main {
-         &-text {
-            margin: toRem(50) auto 0;
-            width: 100%;
-            text-align: center;
-         }
-
-         &-clock-container {
-            position: relative;
-            left: 50%;
-            transform: translateX(-50%);
-            width: toRem(270);
-            height: toRem(270);
-            margin-top: toRem(40);
-            margin-left: 0;
-         }
-
-         &-digital-clock {
-            position: relative;
-            top: toRem(30);
-            left: 50%;
-            transform: translateX(-50%);
-
-            .time {
-               font-size: $font-xl;
-            }
-         }
-      }
-   }
-
-   @include breakpoint-down(599px) {
-      &__main {
-         padding: 0 toRem(30);
-      }
-
-      &__main {
-         &-text {
-            height: toRem(100);
-            .heading {
-               font-size: $font-xl;
-               height: toRem(100);
-
-               & > div {
-                  &:nth-child(4) {
-                     margin-top: 0;
-                  }
-               }
-            }
-         }
-      }
-   }
+    }
+  }
 }
