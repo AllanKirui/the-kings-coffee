@@ -298,13 +298,27 @@
       }
     }
   }
-}
 
-// Media queries
-@include breakpoint-down(849px) {
-  .find-us {
+  .social-mobile {
+    margin-top: toRem(10);
+  }
+
+  // Media queries
+  @include breakpoint-down(849px) {
     .hide-for-small {
       display: none;
+    }
+
+    .intro-text {
+      // gap: toRem(50);
+      .page-title {
+        min-width: fit-content;
+      }
+      // width: 55%;
+      // text-align: right;
+      // .page-title {
+      //   margin-right: 20px;
+      // }
     }
 
     .contact-container {
@@ -317,12 +331,43 @@
       }
     }
   }
-}
 
-@include breakpoint-up(850px) {
-  .find-us {
+  @include breakpoint-up(850px) {
     .hide-for-large {
       display: none;
+    }
+  }
+
+  @include breakpoint-down(779px) {
+    .intro-text {
+      .page-quote {
+        text-align: right;
+        // min-width: fit-content;
+      }
+      // width: 55%;
+      // text-align: right;
+      // .page-title {
+      //   margin-right: 20px;
+      // }
+    }
+
+    .contact {
+      font-family: "Poppins", sans-serif;
+      gap: toRem(50);
+    }
+  }
+
+  @include breakpoint-down(500px) {
+    .intro-text {
+      .page-quote {
+        text-align: center;
+        // min-width: fit-content;
+      }
+      // width: 55%;
+      // text-align: right;
+      // .page-title {
+      //   margin-right: 20px;
+      // }
     }
   }
 }
