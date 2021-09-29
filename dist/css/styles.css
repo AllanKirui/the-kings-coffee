@@ -19,6 +19,16 @@ body {
   background-color: #fbf0da;
 }
 
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4.375rem;
+  background-color: #161719;
+}
+
 h1,
 h2,
 h3,
@@ -616,7 +626,7 @@ a:hover {
 .home__main-digital-clock {
   text-transform: uppercase;
   text-align: center;
-  color: #9f703a;
+  color: #5a4020;
   font-size: 0.875rem;
   position: absolute;
   bottom: -38%;
@@ -984,7 +994,7 @@ a:hover {
   line-height: 1.375rem;
 }
 
-.menu .testimonials .testimonial-right .customer-img {
+.menu .testimonials .testimonial-right .customer-image {
   width: 11.25rem;
   height: 11.25rem;
 }
@@ -1055,12 +1065,14 @@ a:hover {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .menu .testimonials .testimonial-right .customer-image {
+  .menu .testimonials .testimonial-right {
     position: absolute;
     top: -10%;
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
+  }
+  .menu .testimonials .testimonial-right .customer-image {
     width: 6.25rem;
     height: 6.25rem;
   }
