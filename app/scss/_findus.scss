@@ -27,7 +27,7 @@
 
   .contact {
     font-family: "Poppins", sans-serif;
-    gap: toRem(20);
+    gap: toRem(25);
     margin-bottom: toRem(90);
 
     .contact-info {
@@ -68,12 +68,13 @@
 
     .contact-form {
       background-color: $champagne;
-      width: toRem(500);
       border-radius: toRem(10);
       // box-shadow: toRem(20) toRem(20) toRem(20) #aaa;
       box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
         rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
       transition: all 0.4s;
+      width: 100%;
+      max-width: toRem(500);
 
       &:hover {
         transform: translateY(toRem(-15));
@@ -82,11 +83,13 @@
       }
 
       form {
-        padding: toRem(40) 0;
+        width: 100%;
+        padding: toRem(40) toRem(40);
       }
 
       .form-control {
-        max-width: toRem(360);
+        // max-width: toRem(360);
+        width: 100%;
         margin: 0 auto toRem(15);
         position: relative;
 
@@ -146,10 +149,11 @@
         // position: relative;
         // left: 50%;
         // transform: translateX(-50%);
-        display: inline-block;
-        width: toRem(360);
+        // display: inline-block;
+        // width: toRem(360);
+        width: 100%;
         padding: toRem(15);
-        margin-left: calc(50% - 180px);
+        // margin-left: calc(50% - 180px);
         margin-top: toRem(15);
         border-radius: toRem(50);
         border: none;
@@ -302,8 +306,15 @@
     .hide-for-small {
       display: none;
     }
+
     .contact-container {
       padding: 0 toRem(30) toRem(60);
+
+      .contact-form {
+        form {
+          padding: toRem(40) toRem(20);
+        }
+      }
     }
   }
 }
