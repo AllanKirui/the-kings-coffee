@@ -155,7 +155,7 @@
     }
 
     .testimonial-right {
-      .customer-img {
+      .customer-image {
         width: toRem(180);
         height: toRem(180);
       }
@@ -222,11 +222,11 @@
       }
 
       .testimonial-right {
+        position: absolute;
+        top: -10%;
+        left: 50%;
+        transform: translateX(-50%);
         .customer-image {
-          position: absolute;
-          top: -10%;
-          left: 50%;
-          transform: translateX(-50%);
           width: toRem(100);
           height: toRem(100);
         }
