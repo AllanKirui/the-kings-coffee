@@ -153,10 +153,6 @@
           transform: scale(0.95);
         }
 
-        &:focus {
-          outline: none;
-        }
-
         &::before {
           content: "";
           position: absolute;
