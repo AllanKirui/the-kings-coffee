@@ -318,7 +318,8 @@ p {
 
 .container .coffee-bean-logo img {
   margin: 0 auto;
-  max-width: 21.9375rem;
+  width: 21.9375rem;
+  max-width: 100%;
 }
 
 .container .coffee-bean-logo p {
@@ -393,6 +394,10 @@ a:hover {
   -webkit-text-stroke: 1.5px #161719;
 }
 
+.hide-for-large {
+  display: none;
+}
+
 @media (max-width: 1099px) {
   .container .intro {
     padding: 0 6.25rem;
@@ -400,8 +405,11 @@ a:hover {
 }
 
 @media (max-width: 979px) {
-  .container .nav-links {
+  .container .nav-links.hide-for-small {
     display: none;
+  }
+  .container .nav-burger.hide-for-large {
+    display: unset;
   }
   .container .intro .page-title {
     top: -1.25rem;
@@ -412,12 +420,6 @@ a:hover {
   }
   .container .intro .page-quote {
     font-size: 2rem;
-  }
-}
-
-@media (min-width: 980px) {
-  .nav-burger {
-    display: none;
   }
 }
 
@@ -446,7 +448,7 @@ a:hover {
     padding: 0;
   }
   .container .page-quote {
-    margin: 0 0 1.75rem;
+    margin: 1.75rem 0;
     text-align: center;
   }
 }
@@ -458,7 +460,8 @@ a:hover {
 }
 
 @media (max-width: 599px) {
-  .container .header {
+  .container .header,
+  .container .intro {
     padding: 0 1.875rem;
   }
   .container .nav-logo {
@@ -471,21 +474,10 @@ a:hover {
   .container .social-mobile__left-bar, .container .social-mobile__right-bar {
     width: 2.5rem;
   }
-  .container .intro {
-    padding: 0 1.875rem;
-  }
-  .container .intro .coffee-bean-logo {
-    position: relative;
-  }
-  .container .intro .coffee-bean-logo img {
-    width: 80vw;
-  }
 }
 
-@media (max-width: 319px) {
-  .container .header {
-    padding: 0 0.9375rem;
-  }
+@media (max-width: 320px) {
+  .container .header,
   .container .intro {
     padding: 0 0.9375rem;
   }
@@ -1388,14 +1380,14 @@ a:hover {
 
 .find-us .contact {
   font-family: "Poppins", sans-serif;
-  gap: 1.5625rem;
+  gap: 3.125rem;
   margin-bottom: 5.625rem;
 }
 
 .find-us .contact .contact-info {
   max-width: 31.25rem;
   background-color: #f7e7ce;
-  padding: clamp(1.875rem, 3.75rem 3.75rem);
+  padding: 3.75rem 0;
   gap: 3.4375rem;
   border-radius: 0.625rem;
   -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
@@ -1448,7 +1440,7 @@ a:hover {
 
 .find-us .contact .contact-form form {
   width: 100%;
-  padding: 2.5rem 2.5rem;
+  padding: 2.5rem;
 }
 
 .find-us .contact .contact-form .form-control {
@@ -1651,6 +1643,9 @@ a:hover {
   .find-us .hide-for-small {
     display: none;
   }
+  .find-us .hide-for-large {
+    display: unset;
+  }
   .find-us .intro-text .page-title {
     min-width: -webkit-fit-content;
     min-width: -moz-fit-content;
@@ -1664,25 +1659,9 @@ a:hover {
   }
 }
 
-@media (min-width: 850px) {
-  .find-us .hide-for-large {
-    display: none;
-  }
-}
-
-@media (max-width: 779px) {
+@media (min-width: 750px) {
   .find-us .intro-text .page-quote {
     text-align: right;
-  }
-  .find-us .contact {
-    font-family: "Poppins", sans-serif;
-    gap: 3.125rem;
-  }
-}
-
-@media (max-width: 500px) {
-  .find-us .intro-text .page-quote {
-    text-align: center;
   }
 }
 /*# sourceMappingURL=styles.css.map */
