@@ -22,13 +22,13 @@
 
   .contact {
     font-family: "Poppins", sans-serif;
-    gap: toRem(25);
+    gap: toRem(50);
     margin-bottom: toRem(90);
 
     .contact-info {
       max-width: toRem(500);
       background-color: $champagne;
-      padding: clamp(toRem(30), toRem(60) toRem(60));
+      padding: toRem(60) 0;
       gap: toRem(55);
       border-radius: toRem(10);
       box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
@@ -76,7 +76,7 @@
 
       form {
         width: 100%;
-        padding: toRem(40) toRem(40);
+        padding: toRem(40);
       }
 
       .form-control {
@@ -267,6 +267,10 @@
       display: none;
     }
 
+    .hide-for-large {
+      display: unset;
+    }
+
     .intro-text {
       .page-title {
         min-width: fit-content;
@@ -284,29 +288,10 @@
     }
   }
 
-  @include breakpoint-up(850px) {
-    .hide-for-large {
-      display: none;
-    }
-  }
-
-  @include breakpoint-down(779px) {
+  @include breakpoint-up(750px) {
     .intro-text {
       .page-quote {
         text-align: right;
-      }
-    }
-
-    .contact {
-      font-family: "Poppins", sans-serif;
-      gap: toRem(50);
-    }
-  }
-
-  @include breakpoint-down(500px) {
-    .intro-text {
-      .page-quote {
-        text-align: center;
       }
     }
   }
