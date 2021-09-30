@@ -28,7 +28,7 @@
     .contact-info {
       max-width: toRem(500);
       background-color: $champagne;
-      padding: toRem(60);
+      padding: clamp(toRem(30), toRem(60) toRem(60));
       gap: toRem(55);
       border-radius: toRem(10);
       box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
