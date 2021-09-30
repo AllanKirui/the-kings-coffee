@@ -123,6 +123,7 @@ p {
   -webkit-transition: 0.2s ease-in;
   transition: 0.2s ease-in;
   cursor: pointer;
+  border: none;
 }
 
 .container .nav-burger.active {
@@ -1555,10 +1556,6 @@ a:hover {
 .find-us .contact .contact-form .btn:active {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
-}
-
-.find-us .contact .contact-form .btn:focus {
-  outline: none;
 }
 
 .find-us .contact .contact-form .btn::before {
