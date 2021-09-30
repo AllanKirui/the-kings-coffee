@@ -302,7 +302,8 @@ p {
   .coffee-bean-logo {
     img {
       margin: 0 auto;
-      max-width: toRem(351);
+      width: toRem(351);
+      max-width: 100%;
     }
 
     p {
@@ -368,6 +369,10 @@ a:hover {
   -webkit-text-stroke: 1.5px $elgengrau;
 }
 
+.hide-for-large {
+  display: none;
+}
+
 // Media queries
 @include breakpoint-down(1099px) {
   .container {
@@ -379,8 +384,12 @@ a:hover {
 
 @include breakpoint-down(979px) {
   .container {
-    .nav-links {
+    .nav-links.hide-for-small {
       display: none;
+    }
+
+    .nav-burger.hide-for-large {
+      display: unset;
     }
 
     .intro {
@@ -396,12 +405,6 @@ a:hover {
         font-size: toRem(32);
       }
     }
-  }
-}
-
-@include breakpoint-up(980px) {
-  .nav-burger {
-    display: none;
   }
 }
 
@@ -431,7 +434,7 @@ a:hover {
     }
 
     .page-quote {
-      margin: 0 0 toRem(28);
+      margin: toRem(28) 0;
       text-align: center;
     }
   }
@@ -445,7 +448,8 @@ a:hover {
 
 @include breakpoint-down(599px) {
   .container {
-    .header {
+    .header,
+    .intro {
       padding: 0 toRem(30);
     }
 
@@ -466,26 +470,12 @@ a:hover {
         width: toRem(40);
       }
     }
-
-    .intro {
-      padding: 0 toRem(30);
-
-      .coffee-bean-logo {
-        position: relative;
-        img {
-          width: 80vw;
-        }
-      }
-    }
   }
 }
 
-@include breakpoint-down(319px) {
+@include breakpoint-down(320px) {
   .container {
-    .header {
-      padding: 0 toRem(15);
-    }
-
+    .header,
     .intro {
       padding: 0 toRem(15);
     }
