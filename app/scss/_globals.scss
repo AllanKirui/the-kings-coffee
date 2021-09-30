@@ -116,6 +116,7 @@ p {
       z-index: 4;
       transition: 0.2s ease-in;
       cursor: pointer;
+      border: none;
 
       &.active {
         background: url("../../img/kettle_opened.svg");
