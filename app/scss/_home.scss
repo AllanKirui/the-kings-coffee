@@ -241,6 +241,7 @@
 
   @include breakpoint-down(1023px) {
     &__main {
+      padding: 0 toRem(80);
       flex-direction: column;
 
       &-text {
@@ -269,20 +270,8 @@
     }
   }
 
-  @include breakpoint-down(869px) {
-    &__main {
-      padding: 0 toRem(80);
-    }
-  }
-
   @include breakpoint-down(749px) {
     &__main {
-      &-text {
-        margin: toRem(50) auto 0;
-        width: 100%;
-        text-align: center;
-      }
-
       &-clock-container {
         position: relative;
         left: 50%;
@@ -308,21 +297,32 @@
 
   @include breakpoint-down(599px) {
     &__main {
-      padding: 0 toRem(30);
-    }
+      padding: 0 toRem(15);
 
-    &__main {
       &-text {
         height: toRem(100);
+
         .heading {
-          font-size: $font-xl;
           height: toRem(100);
+          font-size: $font-xl;
 
           & > div {
             &:nth-child(4) {
               margin-top: 0;
             }
           }
+        }
+      }
+    }
+  }
+
+  @include breakpoint-down(374px) {
+    &__main {
+      &-text {
+        height: toRem(140);
+
+        .heading {
+          height: toRem(140);
         }
       }
     }

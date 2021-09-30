@@ -2,10 +2,10 @@
   font-family: "Josefin Sans", sans-serif;
 
   .coffee-menu {
-    padding: 0 toRem(100);
+    padding: 0 toRem(110);
     margin-top: toRem(50);
     margin-bottom: toRem(50);
-    gap: toRem(60);
+    gap: clamp(toRem(40), toRem(50), toRem(60));
   }
 
   .menu-item {
@@ -77,6 +77,8 @@
     }
 
     .promo-images {
+      flex-wrap: wrap;
+      justify-content: center;
       align-items: baseline;
       gap: toRem(25);
 
@@ -88,7 +90,7 @@
 
   // Testimonial styles
   .testimonials {
-    padding-bottom: toRem(60);
+    padding: 0 toRem(110) toRem(60);
 
     h3 {
       text-align: center;
@@ -153,13 +155,6 @@
         line-height: toRem(22);
       }
     }
-
-    .testimonial-right {
-      .customer-image {
-        width: toRem(180);
-        height: toRem(180);
-      }
-    }
   }
 
   .social-mobile {
@@ -174,43 +169,32 @@
   }
 
   // Media queries
-  @include breakpoint-down(979px) {
-    .coffee-menu {
-      gap: toRem(40);
-    }
-  }
-
-  @include breakpoint-down(849px) {
-    .coffee-menu {
-      gap: toRem(40);
-    }
-
+  @include breakpoint-down(1219px) {
     .menu-item {
       width: clamp(toRem(300), toRem(380), toRem(450));
-    }
-
-    .testimonials {
-      padding: 0 toRem(120);
-
-      .testimonial-right {
-        .customer-image {
-          width: toRem(150);
-          height: toRem(150);
-        }
-      }
     }
   }
 
   @include breakpoint-down(749px) {
+    .coffee-menu,
+    .coffee-mugs {
+      padding: 0 toRem(30);
+    }
+
     .testimonials {
-      padding: 0 toRem(80);
+      padding: 0 toRem(30);
 
       h3 {
         margin-bottom: toRem(60);
       }
 
       .testimonial-container {
-        padding-top: toRem(40);
+        // padding-top: toRem(40);
+        padding: toRem(40) toRem(20) 0;
+
+        .bg-img-2 {
+          left: toRem(200);
+        }
       }
 
       .testimonial-left {
@@ -229,38 +213,6 @@
         .customer-image {
           width: toRem(100);
           height: toRem(100);
-        }
-      }
-    }
-  }
-
-  @include breakpoint-down(599px) {
-    .coffee-menu {
-      padding: 0 toRem(30);
-    }
-
-    .coffee-mugs {
-      .promo-text {
-        padding: 0 toRem(30);
-        text-align: center;
-        font-size: $font-sm;
-      }
-    }
-
-    .promo-images {
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .testimonials {
-      padding: 0 toRem(30);
-
-      .testimonial-container {
-        padding-left: toRem(20);
-        padding-right: toRem(20);
-
-        .bg-img-2 {
-          left: toRem(200);
         }
       }
     }

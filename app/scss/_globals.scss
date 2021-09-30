@@ -460,6 +460,13 @@ a:hover {
       }
     }
 
+    .social-mobile {
+      &__left-bar,
+      &__right-bar {
+        width: toRem(40);
+      }
+    }
+
     .intro {
       padding: 0 toRem(30);
 
@@ -469,6 +476,18 @@ a:hover {
           width: 80vw;
         }
       }
+    }
+  }
+}
+
+@include breakpoint-down(319px) {
+  .container {
+    .header {
+      padding: 0 toRem(15);
+    }
+
+    .intro {
+      padding: 0 toRem(15);
     }
   }
 }
