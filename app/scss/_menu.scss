@@ -1,6 +1,45 @@
 .menu {
   font-family: "Josefin Sans", sans-serif;
 
+  .coffee-cup {
+    position: fixed;
+    top: 80vh;
+    right: 0;
+
+    img {
+      max-width: 80%;
+    }
+
+    .steam {
+      position: absolute;
+      top: -80%;
+      left: 35%;
+
+      img {
+        opacity: 0;
+        animation: steaming 3s linear infinite;
+      }
+
+      img:nth-child(1) {
+        position: absolute;
+        bottom: -10px;
+        left: -15px;
+        animation-delay: 1.8s;
+      }
+
+      img:nth-child(2) {
+        animation-delay: 1s;
+      }
+
+      img:nth-child(3) {
+        position: absolute;
+        bottom: -8px;
+        right: -7px;
+        animation-delay: 1.3s;
+      }
+    }
+  }
+
   .coffee-menu {
     padding: 0 toRem(110);
     margin-top: toRem(50);
@@ -162,6 +201,26 @@
   }
 
   // Animations
+  @keyframes steaming {
+    0% {
+      transform: translateY(0);
+      opacity: 0;
+    }
+    5% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    95% {
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(-7vh);
+      opacity: 0;
+    }
+  }
+
   @keyframes grow {
     0% {
       transform: scaleX(0);
@@ -176,6 +235,10 @@
   }
 
   @include breakpoint-down(749px) {
+    .coffee-cup {
+      display: none;
+    }
+
     .coffee-menu,
     .coffee-mugs {
       padding: 0 toRem(30);
