@@ -40,7 +40,6 @@ p {
   position: relative;
   margin: 0 auto;
   max-width: 87.5rem;
-  height: 100vh;
 }
 
 .container .header {
@@ -839,6 +838,49 @@ a:hover {
   font-family: "Josefin Sans", sans-serif;
 }
 
+.menu .coffee-cup {
+  position: fixed;
+  top: 80vh;
+  right: 0;
+}
+
+.menu .coffee-cup img {
+  max-width: 80%;
+}
+
+.menu .coffee-cup .steam {
+  position: absolute;
+  top: -80%;
+  left: 35%;
+}
+
+.menu .coffee-cup .steam img {
+  opacity: 0;
+  -webkit-animation: steaming 3s linear infinite;
+          animation: steaming 3s linear infinite;
+}
+
+.menu .coffee-cup .steam img:nth-child(1) {
+  position: absolute;
+  bottom: -10px;
+  left: -15px;
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
+}
+
+.menu .coffee-cup .steam img:nth-child(2) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.menu .coffee-cup .steam img:nth-child(3) {
+  position: absolute;
+  bottom: -8px;
+  right: -7px;
+  -webkit-animation-delay: 1.3s;
+          animation-delay: 1.3s;
+}
+
 .menu .coffee-menu {
   padding: 0 6.875rem;
   margin-top: 3.125rem;
@@ -1007,6 +1049,50 @@ a:hover {
   margin-top: 4.375rem;
 }
 
+@-webkit-keyframes steaming {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 0;
+  }
+  5% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(-7vh);
+            transform: translateY(-7vh);
+    opacity: 0;
+  }
+}
+
+@keyframes steaming {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 0;
+  }
+  5% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(-7vh);
+            transform: translateY(-7vh);
+    opacity: 0;
+  }
+}
+
 @-webkit-keyframes grow {
   0% {
     -webkit-transform: scaleX(0);
@@ -1028,6 +1114,9 @@ a:hover {
 }
 
 @media (max-width: 749px) {
+  .menu .coffee-cup {
+    display: none;
+  }
   .menu .coffee-menu,
   .menu .coffee-mugs {
     padding: 0 1.875rem;
