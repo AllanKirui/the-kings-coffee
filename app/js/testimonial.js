@@ -17,7 +17,7 @@ const testimonialsDB = [
   },
   {
     name: "Jonathan",
-    photo: "../../img/customer-3.webp",
+    photo: "../../img/customer-3.png",
     text: '"Friendly service and awesome coffee which they always top off with some new amazing coffee art."',
   },
   {
