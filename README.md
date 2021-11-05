@@ -50,7 +50,7 @@ What's in view:
 
 ### Links
 
-- Live Site URL: [The King's Coffee]()
+- Live Site URL: [The King's Coffee](https://allankirui.github.io/the-kings-coffee)
 
 ## My process
 
